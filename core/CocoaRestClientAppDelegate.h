@@ -110,6 +110,7 @@ extern NSString* const RESPONSE_TIMEOUT;
 @property (assign) IBOutlet NSComboBox *urlBox;
 @property (assign) IBOutlet NSButton *submitButton;
 @property (assign) IBOutlet NSTextView *responseText;
+@property (assign) IBOutlet NSPanel *requestsPanel;
 
 @property (assign) IBOutlet WebView *responseWebView;
 @property (assign) IBOutlet HighlightedTextView *responseView;
@@ -157,6 +158,7 @@ extern NSString* const RESPONSE_TIMEOUT;
 - (IBAction) saveRequest:(id) sender;
 - (IBAction) overwriteRequest:(id) sender;
 - (IBAction) doneSaveRequest:(id) sender;
+- (IBAction) showRequestsPanel:(id)sender;
 - (void) loadSavedRequest:(NSDictionary *) request;
 - (IBAction) deleteSavedRequest:(id) sender;
 - (NSString *) pathForDataFile;

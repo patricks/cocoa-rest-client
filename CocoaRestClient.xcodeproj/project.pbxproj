@@ -23,6 +23,8 @@
 		510FDE5C17036FDC0024972E /* NSData+MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = 510FDE4F17036FDC0024972E /* NSData+MessagePack.m */; };
 		510FDE5D17036FDC0024972E /* NSDictionary+MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = 510FDE5117036FDC0024972E /* NSDictionary+MessagePack.m */; };
 		510FDE5E17036FDC0024972E /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 510FDE5217036FDC0024972E /* readme.md */; };
+		51C01903170E764600A0C6B7 /* SavedRequests.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C01902170E764600A0C6B7 /* SavedRequests.xib */; };
+		51C01906170E81F800A0C6B7 /* CRCRequestGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C01905170E81F700A0C6B7 /* CRCRequestGroup.m */; };
 		5704EE6A155B533200C55656 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704EE69155B533200C55656 /* libicucore.dylib */; };
 		5704EE6C155B540900C55656 /* MGSFragaria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704EE6B155B540900C55656 /* MGSFragaria.framework */; };
 		5704EE6D155B563E00C55656 /* MGSFragaria.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5704EE6B155B540900C55656 /* MGSFragaria.framework */; };
@@ -126,6 +128,9 @@
 		510FDE5017036FDC0024972E /* NSDictionary+MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MessagePack.h"; sourceTree = "<group>"; };
 		510FDE5117036FDC0024972E /* NSDictionary+MessagePack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MessagePack.m"; sourceTree = "<group>"; };
 		510FDE5217036FDC0024972E /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
+		51C01902170E764600A0C6B7 /* SavedRequests.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedRequests.xib; sourceTree = "<group>"; };
+		51C01904170E81F700A0C6B7 /* CRCRequestGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCRequestGroup.h; path = request/CRCRequestGroup.h; sourceTree = "<group>"; };
+		51C01905170E81F700A0C6B7 /* CRCRequestGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCRequestGroup.m; path = request/CRCRequestGroup.m; sourceTree = "<group>"; };
 		5704EE69155B533200C55656 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		5704EE6B155B540900C55656 /* MGSFragaria.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MGSFragaria.framework; sourceTree = "<group>"; };
 		5704EE83155B9C4200C55656 /* HighlightedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighlightedTextView.h; path = view/HighlightedTextView.h; sourceTree = "<group>"; };
@@ -278,6 +283,7 @@
 				AFBB7D4914F98B4000424C12 /* Preferences.xib */,
 				AFA11AB315CEDA3600831738 /* Welcome.xib */,
 				AFA11ACC15CF036300831738 /* motd.txt */,
+				51C01902170E764600A0C6B7 /* SavedRequests.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -402,6 +408,8 @@
 				D714A0A111E901FB00F5A80B /* CRCRequest.m */,
 				2C954AF816B9799D00C8D54B /* NSData+gzip.h */,
 				2C954AF916B9799D00C8D54B /* NSData+gzip.m */,
+				51C01904170E81F700A0C6B7 /* CRCRequestGroup.h */,
+				51C01905170E81F700A0C6B7 /* CRCRequestGroup.m */,
 			);
 			name = request;
 			sourceTree = "<group>";
@@ -486,6 +494,7 @@
 				AFA11AB515CEDA3600831738 /* Welcome.xib in Resources */,
 				AFA11ACD15CF036300831738 /* motd.txt in Resources */,
 				510FDE5E17036FDC0024972E /* readme.md in Resources */,
+				51C01903170E764600A0C6B7 /* SavedRequests.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +539,7 @@
 				510FDE5B17036FDC0024972E /* NSArray+MessagePack.m in Sources */,
 				510FDE5C17036FDC0024972E /* NSData+MessagePack.m in Sources */,
 				510FDE5D17036FDC0024972E /* NSDictionary+MessagePack.m in Sources */,
+				51C01906170E81F800A0C6B7 /* CRCRequestGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

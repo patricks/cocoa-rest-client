@@ -21,7 +21,8 @@
 #define REGET_MENU_TAG 151
 
 #define APPLICATION_NAME @"CocoaRestClient"
-#define DATAFILE_NAME @"CocoaRestClient.savedRequests"
+#define DATAFILE_NAME @"CocoaRestClient.savedRequests2"
+#define UNSORTED_REQUESTS_STRING = @"Unsorted Requests"
 
 NSString* const FOLLOW_REDIRECTS = @"followRedirects";
 NSString* const APPLY_HTTP_METHOD_ON_REDIRECT = @"applyHttpMethodOnRedirect";
@@ -750,6 +751,13 @@ static CRCContentType requestContentType;
     }
 }
 
+- (IBAction)showRequestsPanel:(id)sender {
+    if (nil == self.requestsPanel) {
+        [NSBundle loadNibNamed:@"SavedRequests" owner:self];
+    }
+    [self.requestsPanel makeKeyAndOrderFront:self];
+}
+
 #pragma mark Table view methods
 - (NSInteger) numberOfRowsInTableView:(NSTableView *) tableView {
 	NSInteger count;
@@ -871,7 +879,7 @@ static CRCContentType requestContentType;
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item {
-    return NO;
+    return [item isKindOfClass:[NSArray class]];
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item {

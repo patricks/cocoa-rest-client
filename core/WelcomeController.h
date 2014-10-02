@@ -9,9 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface WelcomeController : NSWindowController {
-    NSTextView *messageText;
+    NSTextView *__strong messageText;
 }
 
-@property (assign) IBOutlet NSTextView *messageText;
+@property (strong) IBOutlet NSTextView *messageText;
 
 @end

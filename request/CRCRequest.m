@@ -37,7 +37,7 @@
 	if([application.filesTable count] > 0)
 		request.files = [[NSArray alloc] initWithArray:application.filesTable copyItems:YES];
 	
-	return [request autorelease];
+	return request;
 }
 
 - (void) encodeWithCoder: (NSCoder *)coder 
@@ -79,18 +79,4 @@
 	return self;
 }
 
-- (void)dealloc
-{
-	self.name = nil;
-	self.url = nil;
-	self.method = nil;
-	self.username = nil;
-	self.password = nil;
-	self.requestText = nil;
-	self.headers = nil;
-	self.files = nil;
-	self.params = nil;
-	
-	[super dealloc];
-}
 @end

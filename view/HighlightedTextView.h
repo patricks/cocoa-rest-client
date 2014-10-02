@@ -13,10 +13,10 @@
     
     MGSFragaria *fragaria;
     NSDictionary *syntaxForMIME;
-    NSTextView *textView;
+    NSTextView *__strong textView;
     
 }
-@property (assign) NSTextView * textView;
+@property (strong) NSTextView * textView;
 @property (copy) NSString * syntaxMIME;
 
 - (void) initHighlightedFrame;

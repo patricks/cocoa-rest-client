@@ -31,6 +31,54 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		983DC81719DDD06F001CC18E /* CRCSyntaxHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 983DC81619DDD06F001CC18E /* CRCSyntaxHighlightView.m */; };
+		983DC81A19DDD690001CC18E /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 983DC81919DDD690001CC18E /* GTMNSString+HTML.m */; };
+		983DC81C19DDDD26001CC18E /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 983DC81B19DDDD26001CC18E /* template.html */; };
+		983DC88219DDE188001CC18E /* shAutoloader.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83119DDDF1D001CC18E /* shAutoloader.js */; };
+		983DC88319DDE188001CC18E /* shBrushAppleScript.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83219DDDF1D001CC18E /* shBrushAppleScript.js */; };
+		983DC88419DDE188001CC18E /* shBrushAS3.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83319DDDF1D001CC18E /* shBrushAS3.js */; };
+		983DC88519DDE188001CC18E /* shBrushBash.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83419DDDF1D001CC18E /* shBrushBash.js */; };
+		983DC88619DDE188001CC18E /* shBrushColdFusion.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83519DDDF1D001CC18E /* shBrushColdFusion.js */; };
+		983DC88719DDE188001CC18E /* shBrushCpp.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83619DDDF1D001CC18E /* shBrushCpp.js */; };
+		983DC88819DDE188001CC18E /* shBrushCSharp.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83719DDDF1D001CC18E /* shBrushCSharp.js */; };
+		983DC88919DDE188001CC18E /* shBrushCss.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83819DDDF1D001CC18E /* shBrushCss.js */; };
+		983DC88A19DDE188001CC18E /* shBrushDelphi.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83919DDDF1D001CC18E /* shBrushDelphi.js */; };
+		983DC88B19DDE188001CC18E /* shBrushDiff.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83A19DDDF1D001CC18E /* shBrushDiff.js */; };
+		983DC88C19DDE188001CC18E /* shBrushErlang.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83B19DDDF1D001CC18E /* shBrushErlang.js */; };
+		983DC88D19DDE188001CC18E /* shBrushGroovy.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83C19DDDF1D001CC18E /* shBrushGroovy.js */; };
+		983DC88E19DDE188001CC18E /* shBrushJava.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83D19DDDF1D001CC18E /* shBrushJava.js */; };
+		983DC88F19DDE188001CC18E /* shBrushJavaFX.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83E19DDDF1D001CC18E /* shBrushJavaFX.js */; };
+		983DC89019DDE188001CC18E /* shBrushJScript.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC83F19DDDF1D001CC18E /* shBrushJScript.js */; };
+		983DC89119DDE188001CC18E /* shBrushPerl.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84019DDDF1D001CC18E /* shBrushPerl.js */; };
+		983DC89219DDE188001CC18E /* shBrushPhp.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84119DDDF1D001CC18E /* shBrushPhp.js */; };
+		983DC89319DDE188001CC18E /* shBrushPlain.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84219DDDF1D001CC18E /* shBrushPlain.js */; };
+		983DC89419DDE188001CC18E /* shBrushPowerShell.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84319DDDF1D001CC18E /* shBrushPowerShell.js */; };
+		983DC89519DDE188001CC18E /* shBrushPython.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84419DDDF1D001CC18E /* shBrushPython.js */; };
+		983DC89619DDE188001CC18E /* shBrushRuby.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84519DDDF1D001CC18E /* shBrushRuby.js */; };
+		983DC89719DDE188001CC18E /* shBrushSass.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84619DDDF1D001CC18E /* shBrushSass.js */; };
+		983DC89819DDE188001CC18E /* shBrushScala.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84719DDDF1D001CC18E /* shBrushScala.js */; };
+		983DC89919DDE188001CC18E /* shBrushSql.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84819DDDF1D001CC18E /* shBrushSql.js */; };
+		983DC89A19DDE188001CC18E /* shBrushVb.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84919DDDF1E001CC18E /* shBrushVb.js */; };
+		983DC89B19DDE188001CC18E /* shBrushXml.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84A19DDDF1E001CC18E /* shBrushXml.js */; };
+		983DC89C19DDE188001CC18E /* shCore.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84B19DDDF1E001CC18E /* shCore.js */; };
+		983DC89D19DDE188001CC18E /* shLegacy.js in Copy JS Files */ = {isa = PBXBuildFile; fileRef = 983DC84C19DDDF1E001CC18E /* shLegacy.js */; };
+		983DC89F19DDE2EF001CC18E /* shCore.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC81E19DDDF1D001CC18E /* shCore.css */; };
+		983DC8A019DDE2EF001CC18E /* shCoreDefault.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC81F19DDDF1D001CC18E /* shCoreDefault.css */; };
+		983DC8A119DDE2EF001CC18E /* shCoreDjango.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82019DDDF1D001CC18E /* shCoreDjango.css */; };
+		983DC8A219DDE2EF001CC18E /* shCoreEclipse.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82119DDDF1D001CC18E /* shCoreEclipse.css */; };
+		983DC8A319DDE2EF001CC18E /* shCoreEmacs.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82219DDDF1D001CC18E /* shCoreEmacs.css */; };
+		983DC8A419DDE2EF001CC18E /* shCoreFadeToGrey.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82319DDDF1D001CC18E /* shCoreFadeToGrey.css */; };
+		983DC8A519DDE2EF001CC18E /* shCoreMDUltra.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82419DDDF1D001CC18E /* shCoreMDUltra.css */; };
+		983DC8A619DDE2EF001CC18E /* shCoreMidnight.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82519DDDF1D001CC18E /* shCoreMidnight.css */; };
+		983DC8A719DDE2EF001CC18E /* shCoreRDark.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82619DDDF1D001CC18E /* shCoreRDark.css */; };
+		983DC8A819DDE2EF001CC18E /* shThemeDefault.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82719DDDF1D001CC18E /* shThemeDefault.css */; };
+		983DC8A919DDE2EF001CC18E /* shThemeDjango.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82819DDDF1D001CC18E /* shThemeDjango.css */; };
+		983DC8AA19DDE2EF001CC18E /* shThemeEclipse.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82919DDDF1D001CC18E /* shThemeEclipse.css */; };
+		983DC8AB19DDE2EF001CC18E /* shThemeEmacs.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82A19DDDF1D001CC18E /* shThemeEmacs.css */; };
+		983DC8AC19DDE2EF001CC18E /* shThemeFadeToGrey.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82B19DDDF1D001CC18E /* shThemeFadeToGrey.css */; };
+		983DC8AD19DDE2EF001CC18E /* shThemeMDUltra.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82C19DDDF1D001CC18E /* shThemeMDUltra.css */; };
+		983DC8AE19DDE2EF001CC18E /* shThemeMidnight.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82D19DDDF1D001CC18E /* shThemeMidnight.css */; };
+		983DC8AF19DDE2EF001CC18E /* shThemeRDark.css in Copy CSS files */ = {isa = PBXBuildFile; fileRef = 983DC82E19DDDF1D001CC18E /* shThemeRDark.css */; };
 		AF074F5810F595AF00EE44D8 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AF074F4D10F595AF00EE44D8 /* NSObject+SBJSON.m */; };
 		AF074F5910F595AF00EE44D8 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AF074F4F10F595AF00EE44D8 /* NSString+SBJSON.m */; };
 		AF074F5A10F595AF00EE44D8 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AF074F5110F595AF00EE44D8 /* SBJSON.m */; };
@@ -67,6 +115,71 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		983DC88119DDE16C001CC18E /* Copy JS Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = highlighter/js;
+			dstSubfolderSpec = 7;
+			files = (
+				983DC88219DDE188001CC18E /* shAutoloader.js in Copy JS Files */,
+				983DC88319DDE188001CC18E /* shBrushAppleScript.js in Copy JS Files */,
+				983DC88419DDE188001CC18E /* shBrushAS3.js in Copy JS Files */,
+				983DC88519DDE188001CC18E /* shBrushBash.js in Copy JS Files */,
+				983DC88619DDE188001CC18E /* shBrushColdFusion.js in Copy JS Files */,
+				983DC88719DDE188001CC18E /* shBrushCpp.js in Copy JS Files */,
+				983DC88819DDE188001CC18E /* shBrushCSharp.js in Copy JS Files */,
+				983DC88919DDE188001CC18E /* shBrushCss.js in Copy JS Files */,
+				983DC88A19DDE188001CC18E /* shBrushDelphi.js in Copy JS Files */,
+				983DC88B19DDE188001CC18E /* shBrushDiff.js in Copy JS Files */,
+				983DC88C19DDE188001CC18E /* shBrushErlang.js in Copy JS Files */,
+				983DC88D19DDE188001CC18E /* shBrushGroovy.js in Copy JS Files */,
+				983DC88E19DDE188001CC18E /* shBrushJava.js in Copy JS Files */,
+				983DC88F19DDE188001CC18E /* shBrushJavaFX.js in Copy JS Files */,
+				983DC89019DDE188001CC18E /* shBrushJScript.js in Copy JS Files */,
+				983DC89119DDE188001CC18E /* shBrushPerl.js in Copy JS Files */,
+				983DC89219DDE188001CC18E /* shBrushPhp.js in Copy JS Files */,
+				983DC89319DDE188001CC18E /* shBrushPlain.js in Copy JS Files */,
+				983DC89419DDE188001CC18E /* shBrushPowerShell.js in Copy JS Files */,
+				983DC89519DDE188001CC18E /* shBrushPython.js in Copy JS Files */,
+				983DC89619DDE188001CC18E /* shBrushRuby.js in Copy JS Files */,
+				983DC89719DDE188001CC18E /* shBrushSass.js in Copy JS Files */,
+				983DC89819DDE188001CC18E /* shBrushScala.js in Copy JS Files */,
+				983DC89919DDE188001CC18E /* shBrushSql.js in Copy JS Files */,
+				983DC89A19DDE188001CC18E /* shBrushVb.js in Copy JS Files */,
+				983DC89B19DDE188001CC18E /* shBrushXml.js in Copy JS Files */,
+				983DC89C19DDE188001CC18E /* shCore.js in Copy JS Files */,
+				983DC89D19DDE188001CC18E /* shLegacy.js in Copy JS Files */,
+			);
+			name = "Copy JS Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		983DC89E19DDE2DF001CC18E /* Copy CSS files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = highlighter/css;
+			dstSubfolderSpec = 7;
+			files = (
+				983DC89F19DDE2EF001CC18E /* shCore.css in Copy CSS files */,
+				983DC8A019DDE2EF001CC18E /* shCoreDefault.css in Copy CSS files */,
+				983DC8A119DDE2EF001CC18E /* shCoreDjango.css in Copy CSS files */,
+				983DC8A219DDE2EF001CC18E /* shCoreEclipse.css in Copy CSS files */,
+				983DC8A319DDE2EF001CC18E /* shCoreEmacs.css in Copy CSS files */,
+				983DC8A419DDE2EF001CC18E /* shCoreFadeToGrey.css in Copy CSS files */,
+				983DC8A519DDE2EF001CC18E /* shCoreMDUltra.css in Copy CSS files */,
+				983DC8A619DDE2EF001CC18E /* shCoreMidnight.css in Copy CSS files */,
+				983DC8A719DDE2EF001CC18E /* shCoreRDark.css in Copy CSS files */,
+				983DC8A819DDE2EF001CC18E /* shThemeDefault.css in Copy CSS files */,
+				983DC8A919DDE2EF001CC18E /* shThemeDjango.css in Copy CSS files */,
+				983DC8AA19DDE2EF001CC18E /* shThemeEclipse.css in Copy CSS files */,
+				983DC8AB19DDE2EF001CC18E /* shThemeEmacs.css in Copy CSS files */,
+				983DC8AC19DDE2EF001CC18E /* shThemeFadeToGrey.css in Copy CSS files */,
+				983DC8AD19DDE2EF001CC18E /* shThemeMDUltra.css in Copy CSS files */,
+				983DC8AE19DDE2EF001CC18E /* shThemeMidnight.css in Copy CSS files */,
+				983DC8AF19DDE2EF001CC18E /* shThemeRDark.css in Copy CSS files */,
+			);
+			name = "Copy CSS files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFCE79541419B49700E22468 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +249,59 @@
 		5704EECF155C7BF400C55656 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* CocoaRestClient-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CocoaRestClient-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* CocoaRestClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaRestClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		983DC81519DDD06F001CC18E /* CRCSyntaxHighlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCSyntaxHighlightView.h; path = CRCSyntaxHighlighterView/CRCSyntaxHighlightView.h; sourceTree = "<group>"; };
+		983DC81619DDD06F001CC18E /* CRCSyntaxHighlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCSyntaxHighlightView.m; path = CRCSyntaxHighlighterView/CRCSyntaxHighlightView.m; sourceTree = "<group>"; };
+		983DC81819DDD690001CC18E /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+HTML.h"; path = "CRCSyntaxHighlighterView/GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		983DC81919DDD690001CC18E /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+HTML.m"; path = "CRCSyntaxHighlighterView/GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		983DC81B19DDDD26001CC18E /* template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = template.html; path = CRCSyntaxHighlighterView/template.html; sourceTree = "<group>"; };
+		983DC81E19DDDF1D001CC18E /* shCore.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shCore.css; sourceTree = "<group>"; };
+		983DC81F19DDDF1D001CC18E /* shCoreDefault.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shCoreDefault.css; sourceTree = "<group>"; };
+		983DC82019DDDF1D001CC18E /* shCoreDjango.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shCoreDjango.css; sourceTree = "<group>"; };
+		983DC82119DDDF1D001CC18E /* shCoreEclipse.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shCoreEclipse.css; sourceTree = "<group>"; };
+		983DC82219DDDF1D001CC18E /* shCoreEmacs.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shCoreEmacs.css; sourceTree = "<group>"; };
+		983DC82319DDDF1D001CC18E /* shCoreFadeToGrey.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shCoreFadeToGrey.css; sourceTree = "<group>"; };
+		983DC82419DDDF1D001CC18E /* shCoreMDUltra.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shCoreMDUltra.css; sourceTree = "<group>"; };
+		983DC82519DDDF1D001CC18E /* shCoreMidnight.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shCoreMidnight.css; sourceTree = "<group>"; };
+		983DC82619DDDF1D001CC18E /* shCoreRDark.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shCoreRDark.css; sourceTree = "<group>"; };
+		983DC82719DDDF1D001CC18E /* shThemeDefault.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shThemeDefault.css; sourceTree = "<group>"; };
+		983DC82819DDDF1D001CC18E /* shThemeDjango.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shThemeDjango.css; sourceTree = "<group>"; };
+		983DC82919DDDF1D001CC18E /* shThemeEclipse.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shThemeEclipse.css; sourceTree = "<group>"; };
+		983DC82A19DDDF1D001CC18E /* shThemeEmacs.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shThemeEmacs.css; sourceTree = "<group>"; };
+		983DC82B19DDDF1D001CC18E /* shThemeFadeToGrey.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shThemeFadeToGrey.css; sourceTree = "<group>"; };
+		983DC82C19DDDF1D001CC18E /* shThemeMDUltra.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shThemeMDUltra.css; sourceTree = "<group>"; };
+		983DC82D19DDDF1D001CC18E /* shThemeMidnight.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shThemeMidnight.css; sourceTree = "<group>"; };
+		983DC82E19DDDF1D001CC18E /* shThemeRDark.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shThemeRDark.css; sourceTree = "<group>"; };
+		983DC83119DDDF1D001CC18E /* shAutoloader.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shAutoloader.js; sourceTree = "<group>"; };
+		983DC83219DDDF1D001CC18E /* shBrushAppleScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushAppleScript.js; sourceTree = "<group>"; };
+		983DC83319DDDF1D001CC18E /* shBrushAS3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushAS3.js; sourceTree = "<group>"; };
+		983DC83419DDDF1D001CC18E /* shBrushBash.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushBash.js; sourceTree = "<group>"; };
+		983DC83519DDDF1D001CC18E /* shBrushColdFusion.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushColdFusion.js; sourceTree = "<group>"; };
+		983DC83619DDDF1D001CC18E /* shBrushCpp.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushCpp.js; sourceTree = "<group>"; };
+		983DC83719DDDF1D001CC18E /* shBrushCSharp.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushCSharp.js; sourceTree = "<group>"; };
+		983DC83819DDDF1D001CC18E /* shBrushCss.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushCss.js; sourceTree = "<group>"; };
+		983DC83919DDDF1D001CC18E /* shBrushDelphi.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushDelphi.js; sourceTree = "<group>"; };
+		983DC83A19DDDF1D001CC18E /* shBrushDiff.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushDiff.js; sourceTree = "<group>"; };
+		983DC83B19DDDF1D001CC18E /* shBrushErlang.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushErlang.js; sourceTree = "<group>"; };
+		983DC83C19DDDF1D001CC18E /* shBrushGroovy.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushGroovy.js; sourceTree = "<group>"; };
+		983DC83D19DDDF1D001CC18E /* shBrushJava.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushJava.js; sourceTree = "<group>"; };
+		983DC83E19DDDF1D001CC18E /* shBrushJavaFX.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushJavaFX.js; sourceTree = "<group>"; };
+		983DC83F19DDDF1D001CC18E /* shBrushJScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushJScript.js; sourceTree = "<group>"; };
+		983DC84019DDDF1D001CC18E /* shBrushPerl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushPerl.js; sourceTree = "<group>"; };
+		983DC84119DDDF1D001CC18E /* shBrushPhp.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushPhp.js; sourceTree = "<group>"; };
+		983DC84219DDDF1D001CC18E /* shBrushPlain.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushPlain.js; sourceTree = "<group>"; };
+		983DC84319DDDF1D001CC18E /* shBrushPowerShell.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushPowerShell.js; sourceTree = "<group>"; };
+		983DC84419DDDF1D001CC18E /* shBrushPython.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushPython.js; sourceTree = "<group>"; };
+		983DC84519DDDF1D001CC18E /* shBrushRuby.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushRuby.js; sourceTree = "<group>"; };
+		983DC84619DDDF1D001CC18E /* shBrushSass.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushSass.js; sourceTree = "<group>"; };
+		983DC84719DDDF1D001CC18E /* shBrushScala.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushScala.js; sourceTree = "<group>"; };
+		983DC84819DDDF1D001CC18E /* shBrushSql.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushSql.js; sourceTree = "<group>"; };
+		983DC84919DDDF1E001CC18E /* shBrushVb.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushVb.js; sourceTree = "<group>"; };
+		983DC84A19DDDF1E001CC18E /* shBrushXml.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushXml.js; sourceTree = "<group>"; };
+		983DC84B19DDDF1E001CC18E /* shCore.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shCore.js; sourceTree = "<group>"; };
+		983DC84C19DDDF1E001CC18E /* shLegacy.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shLegacy.js; sourceTree = "<group>"; };
+		983DC84E19DDDF1E001CC18E /* shAutoloader.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shAutoloader.js; sourceTree = "<group>"; };
+		983DC84F19DDDF1E001CC18E /* shCore.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shCore.js; sourceTree = "<group>"; };
+		983DC85019DDDF1E001CC18E /* shLegacy.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shLegacy.js; sourceTree = "<group>"; };
 		AF074F4B10F595AF00EE44D8 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = JSON/JSON.h; sourceTree = "<group>"; };
 		AF074F4C10F595AF00EE44D8 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJSON.h"; path = "JSON/NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		AF074F4D10F595AF00EE44D8 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJSON.m"; path = "JSON/NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -213,6 +379,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				98C348A019DDD01100424C5E /* CRCSyntaxHighlightView */,
 				AF7CE5A317618BF80080363B /* Base64 */,
 				510FDE2F17036FDC0024972E /* MsgPack */,
 				AF1A1B9816A1DF1E00915644 /* core */,
@@ -277,6 +444,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				983DC81D19DDDF1D001CC18E /* css */,
+				983DC82F19DDDF1D001CC18E /* js */,
 				AFCE79561419B54600E22468 /* dsa_pub.pem */,
 				AFE1837612E394E5001B1B29 /* LICENSE.txt */,
 				D7D998B511EAA2B2005B8811 /* background-header.png */,
@@ -288,6 +457,7 @@
 				AFBB7D4914F98B4000424C12 /* Preferences.xib */,
 				AFA11AB315CEDA3600831738 /* Welcome.xib */,
 				AFA11ACC15CF036300831738 /* motd.txt */,
+				983DC81B19DDDD26001CC18E /* template.html */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -358,6 +528,97 @@
 				510FDE4517036FDC0024972E /* zone.h */,
 			);
 			path = msgpack;
+			sourceTree = "<group>";
+		};
+		983DC81D19DDDF1D001CC18E /* css */ = {
+			isa = PBXGroup;
+			children = (
+				983DC81E19DDDF1D001CC18E /* shCore.css */,
+				983DC81F19DDDF1D001CC18E /* shCoreDefault.css */,
+				983DC82019DDDF1D001CC18E /* shCoreDjango.css */,
+				983DC82119DDDF1D001CC18E /* shCoreEclipse.css */,
+				983DC82219DDDF1D001CC18E /* shCoreEmacs.css */,
+				983DC82319DDDF1D001CC18E /* shCoreFadeToGrey.css */,
+				983DC82419DDDF1D001CC18E /* shCoreMDUltra.css */,
+				983DC82519DDDF1D001CC18E /* shCoreMidnight.css */,
+				983DC82619DDDF1D001CC18E /* shCoreRDark.css */,
+				983DC82719DDDF1D001CC18E /* shThemeDefault.css */,
+				983DC82819DDDF1D001CC18E /* shThemeDjango.css */,
+				983DC82919DDDF1D001CC18E /* shThemeEclipse.css */,
+				983DC82A19DDDF1D001CC18E /* shThemeEmacs.css */,
+				983DC82B19DDDF1D001CC18E /* shThemeFadeToGrey.css */,
+				983DC82C19DDDF1D001CC18E /* shThemeMDUltra.css */,
+				983DC82D19DDDF1D001CC18E /* shThemeMidnight.css */,
+				983DC82E19DDDF1D001CC18E /* shThemeRDark.css */,
+			);
+			name = css;
+			path = CRCSyntaxHighlighterView/css;
+			sourceTree = "<group>";
+		};
+		983DC82F19DDDF1D001CC18E /* js */ = {
+			isa = PBXGroup;
+			children = (
+				983DC83019DDDF1D001CC18E /* scripts */,
+				983DC84D19DDDF1E001CC18E /* src */,
+			);
+			name = js;
+			path = CRCSyntaxHighlighterView/js;
+			sourceTree = "<group>";
+		};
+		983DC83019DDDF1D001CC18E /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				983DC83119DDDF1D001CC18E /* shAutoloader.js */,
+				983DC83219DDDF1D001CC18E /* shBrushAppleScript.js */,
+				983DC83319DDDF1D001CC18E /* shBrushAS3.js */,
+				983DC83419DDDF1D001CC18E /* shBrushBash.js */,
+				983DC83519DDDF1D001CC18E /* shBrushColdFusion.js */,
+				983DC83619DDDF1D001CC18E /* shBrushCpp.js */,
+				983DC83719DDDF1D001CC18E /* shBrushCSharp.js */,
+				983DC83819DDDF1D001CC18E /* shBrushCss.js */,
+				983DC83919DDDF1D001CC18E /* shBrushDelphi.js */,
+				983DC83A19DDDF1D001CC18E /* shBrushDiff.js */,
+				983DC83B19DDDF1D001CC18E /* shBrushErlang.js */,
+				983DC83C19DDDF1D001CC18E /* shBrushGroovy.js */,
+				983DC83D19DDDF1D001CC18E /* shBrushJava.js */,
+				983DC83E19DDDF1D001CC18E /* shBrushJavaFX.js */,
+				983DC83F19DDDF1D001CC18E /* shBrushJScript.js */,
+				983DC84019DDDF1D001CC18E /* shBrushPerl.js */,
+				983DC84119DDDF1D001CC18E /* shBrushPhp.js */,
+				983DC84219DDDF1D001CC18E /* shBrushPlain.js */,
+				983DC84319DDDF1D001CC18E /* shBrushPowerShell.js */,
+				983DC84419DDDF1D001CC18E /* shBrushPython.js */,
+				983DC84519DDDF1D001CC18E /* shBrushRuby.js */,
+				983DC84619DDDF1D001CC18E /* shBrushSass.js */,
+				983DC84719DDDF1D001CC18E /* shBrushScala.js */,
+				983DC84819DDDF1D001CC18E /* shBrushSql.js */,
+				983DC84919DDDF1E001CC18E /* shBrushVb.js */,
+				983DC84A19DDDF1E001CC18E /* shBrushXml.js */,
+				983DC84B19DDDF1E001CC18E /* shCore.js */,
+				983DC84C19DDDF1E001CC18E /* shLegacy.js */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		983DC84D19DDDF1E001CC18E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				983DC84E19DDDF1E001CC18E /* shAutoloader.js */,
+				983DC84F19DDDF1E001CC18E /* shCore.js */,
+				983DC85019DDDF1E001CC18E /* shLegacy.js */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		98C348A019DDD01100424C5E /* CRCSyntaxHighlightView */ = {
+			isa = PBXGroup;
+			children = (
+				983DC81519DDD06F001CC18E /* CRCSyntaxHighlightView.h */,
+				983DC81619DDD06F001CC18E /* CRCSyntaxHighlightView.m */,
+				983DC81819DDD690001CC18E /* GTMNSString+HTML.h */,
+				983DC81919DDD690001CC18E /* GTMNSString+HTML.m */,
+			);
+			name = CRCSyntaxHighlightView;
 			sourceTree = "<group>";
 		};
 		AF1A1B9816A1DF1E00915644 /* core */ = {
@@ -457,6 +718,8 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				AFCE79541419B49700E22468 /* CopyFiles */,
+				983DC88119DDE16C001CC18E /* Copy JS Files */,
+				983DC89E19DDE2DF001CC18E /* Copy CSS files */,
 			);
 			buildRules = (
 			);
@@ -502,6 +765,7 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				AF7A149B113B583A00F0D6F5 /* cocoaRestClient.icns in Resources */,
 				D7D998B611EAA2B2005B8811 /* background-header.png in Resources */,
+				983DC81C19DDDD26001CC18E /* template.html in Resources */,
 				AFE1837712E394E5001B1B29 /* LICENSE.txt in Resources */,
 				AFCE79571419B54600E22468 /* dsa_pub.pem in Resources */,
 				AFBF08BD14C1E9BB000E7411 /* ExportRequests.xib in Resources */,
@@ -520,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				983DC81A19DDD690001CC18E /* GTMNSString+HTML.m in Sources */,
 				AF1FC48410F435BD00ED5A57 /* CheckableRequestWrapper.m in Sources */,
 				AF074F5810F595AF00EE44D8 /* NSObject+SBJSON.m in Sources */,
 				AF074F5910F595AF00EE44D8 /* NSString+SBJSON.m in Sources */,
@@ -534,6 +799,7 @@
 				D714A0A211E901FB00F5A80B /* CRCRequest.m in Sources */,
 				D7D998B411EAA29B005B8811 /* CRCTopView.m in Sources */,
 				AFBF08C514C32D30000E7411 /* ExportRequestsController.m in Sources */,
+				983DC81719DDD06F001CC18E /* CRCSyntaxHighlightView.m in Sources */,
 				AFBF08E214C4D7EE000E7411 /* CRCDrawerView.m in Sources */,
 				AFBB7D4714F9587A00424C12 /* TabbingTableView.m in Sources */,
 				AFBB7D4E14F98C1B00424C12 /* PreferencesController.m in Sources */,
@@ -601,6 +867,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -608,7 +876,7 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -626,13 +894,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = core/CocoaRestClient_Prefix.pch;
@@ -655,6 +925,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DDEBUG";
 				SDKROOT = macosx;
@@ -670,6 +941,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};

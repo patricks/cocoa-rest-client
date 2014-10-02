@@ -96,6 +96,7 @@ static CRCContentType requestContentType;
 @synthesize syntaxHighlightingMenuItem;
 @synthesize reGetResponseMenuItem;
 @synthesize welcomeController;
+@synthesize highlightView;
 
 - (id) init {
 	self = [super init];
@@ -119,7 +120,6 @@ static CRCContentType requestContentType;
 	[row setObject:@"Content-Type" forKey:@"key"];
 	[row setObject:@"application/x-www-form-urlencoded" forKey:@"value"];
 	[headersTable addObject:row];
-	[row release];
 	
     xmlContentTypes = [NSArray arrayWithObjects:@"application/xml", @"application/atom+xml", @"application/rss+xml",
                        @"text/xml", @"application/soap+xml", @"application/xml-dtd", nil];
@@ -239,7 +239,7 @@ static CRCContentType requestContentType;
     [responseTextPlain setEditable:NO];
     [reGetResponseMenuItem setEnabled:NO];
     
-    MGSSyntaxController *syn = [[[MGSSyntaxController alloc] init] autorelease];
+    MGSSyntaxController *syn = [[MGSSyntaxController alloc] init];
     [responseSyntaxBox addItemsWithObjectValues: [syn syntaxDefinitionNames]];
     [responseSyntaxBox addItemWithObjectValue:@"MsgPack"];
     [responseSyntaxBox selectItemWithObjectValue: @"JavaScript"];
@@ -425,9 +425,6 @@ static CRCContentType requestContentType;
     
     [request setAllHTTPHeaderFields:headersDictionary];
     
-	if (lastRequest != nil) {
-		[lastRequest release];
-	}
 	lastRequest = [CRCRequest requestWithApplication:self];
 	if ([method isEqualToString:@"GET"]) {
         reGetResponseMenuItem.enabled = YES; 
@@ -435,9 +432,6 @@ static CRCContentType requestContentType;
         reGetResponseMenuItem.enabled = NO;
     }
     
-	if (startDate != nil) {
-		[startDate release];
-	}
 	startDate = [NSDate date];
     
     currentRequest = [request copy];
@@ -527,7 +521,7 @@ static CRCContentType requestContentType;
         if (! [[NSUserDefaults standardUserDefaults] boolForKey:FOLLOW_REDIRECTS]) {
             return nil;
         } else {
-            NSMutableURLRequest *r = [[inRequest mutableCopy] autorelease]; // original request
+            NSMutableURLRequest *r = [inRequest mutableCopy]; // original request
             [r setURL: [inRequest URL]];
             
             // For HTTP 301, 302, & 303s, there is w3c guidance about when the POST should be 
@@ -603,24 +597,19 @@ static CRCContentType requestContentType;
                 [responseText setString:jsonFormattedString];
                 needToPrintPlain = NO;
             }
-            [parser release];
-            [jsonStringFromData release];
-            [jsonObj release];
 		} else if ([msgPackContentTypes containsObject:contentType]) {
             NSLog(@"Formatting MsgPack");
-            NSString *parsedObjectFromMsgPack = [[[receivedData messagePackParse]JSONRepresentation]autorelease];
+            NSString *parsedObjectFromMsgPack = [[receivedData messagePackParse]JSONRepresentation];
             // In order to get pretty formatting for free (for now), we convert
             // the parsed MsgPack object back to JSON for pretty printing.
             SBJSON *parser = [[SBJSON alloc] init];
             [parser setHumanReadable:YES];
             id jsonObj = [parser objectWithString:parsedObjectFromMsgPack];
             if (jsonObj) {
-                NSString *jsonFormattedString = [[[NSString alloc] initWithString:[parser stringWithObject:jsonObj]]autorelease];
+                NSString *jsonFormattedString = [[NSString alloc] initWithString:[parser stringWithObject:jsonObj]];
                 [responseText setString:jsonFormattedString];
                 needToPrintPlain = NO;
             }
-            [parser release];
-            [jsonObj release];
             
         }
 	} 
@@ -636,6 +625,7 @@ static CRCContentType requestContentType;
         }
         // Successfully decoded the response string
         if (plainString) {
+            [highlightView setRawContent:plainString];
             [responseText setString:plainString];
         } else {
             [responseText setString:@"Unable to decode charset of response to printable string."];
@@ -646,6 +636,7 @@ static CRCContentType requestContentType;
     [progressIndicator stopAnimation:self];
     [progressIndicator setHidden:YES];
 }
+
 
 #pragma mark -
 #pragma mark Params
@@ -670,7 +661,6 @@ static CRCContentType requestContentType;
 	[paramsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:([paramsTable count] - 1)] byExtendingSelection:NO];
 	[paramsTableView editColumn:0 row:([paramsTable count] - 1) withEvent:nil select:YES];
 	
-	[row release];
 }
 
 - (IBAction) minusParamsRow:(id)sender {
@@ -690,7 +680,6 @@ static CRCContentType requestContentType;
             [paramsTableView editColumn:0 row:(tableRowAndColumn.row + 1) withEvent:nil select:YES];
         }        
     }
-    [tableRowAndColumn release];
 }
 
 
@@ -717,7 +706,6 @@ static CRCContentType requestContentType;
     [filesTableView reloadData];
     [filesTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:([filesTable count] - 1)] byExtendingSelection:NO];
     [filesTableView editColumn:0 row:([filesTable count] - 1) withEvent:nil select:YES];
-    [row release];
 }
 
 - (IBAction) plusFileRow:(id)sender {
@@ -792,7 +780,6 @@ static CRCContentType requestContentType;
 		[row setObject:[sender title] forKey:@"value"];
 		[headersTable addObject:row];
 		[headersTableView reloadData];		
-		[row release];
 	}
 
 //	[tabView selectTabViewItem:reqHeadersTab];
@@ -895,7 +882,6 @@ static CRCContentType requestContentType;
             [headersTableView editColumn:0 row:(tableRowAndColumn.row + 1) withEvent:nil select:YES];
         }        
     }
-    [tableRowAndColumn release];
 }
 
 - (IBAction) plusHeaderRow:(id)sender {
@@ -907,7 +893,6 @@ static CRCContentType requestContentType;
 	[headersTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:([headersTable count] - 1)] byExtendingSelection:NO];
 	[headersTableView editColumn:0 row:([headersTable count] - 1) withEvent:nil select:YES];
 	
-	[row release];
 }
 
 - (IBAction) minusHeaderRow:(id)sender {
@@ -1295,7 +1280,7 @@ static CRCContentType requestContentType;
             NSLog(@"Can not create a support directory.\n%@", [error localizedDescription]);
             return nil;
         }
-        appDataFilePath = [[dir stringByAppendingPathComponent: DATAFILE_NAME] retain];
+        appDataFilePath = [dir stringByAppendingPathComponent: DATAFILE_NAME];
     }
     return appDataFilePath;  
 }
@@ -1320,7 +1305,7 @@ static CRCContentType requestContentType;
 }
 
 - (void) invalidFileAlert {
-    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+    NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"OK"];
     [alert setMessageText:@"Invalid file"];
     [alert setInformativeText:@"Unable to read stored requests from file."];
@@ -1516,18 +1501,14 @@ static CRCContentType requestContentType;
 - (IBAction) viewResponseInBrowser:(id)sender {
     NSString *path = [self saveResponseToTempFile];
     if (path) {
-        NSURL *outAppURL;
-        OSStatus osStatus = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, CFSTR("html"), kLSRolesViewer, (FSRef *) nil, (CFURLRef *) &outAppURL);
-        NSLog(@"Browser app = %@", outAppURL);
+        //NSURL *outAppURL;
         
-        if (outAppURL != nil) {
-            [[NSWorkspace sharedWorkspace] openFile:path withApplication:[outAppURL relativePath]];
-        } else {
+        BOOL result = [[NSWorkspace sharedWorkspace] openFile:path];
+        if (!result) {
             NSLog(@"Error discovering default web browser");
             NSAlert *alert = [[NSAlert alloc] init];
             [alert addButtonWithTitle:@"OK"];
-            [alert setMessageText:@"Unable to discover default web browser"];
-            [alert setInformativeText:[NSString stringWithFormat:@"Status code = %d", osStatus]];
+            [alert setMessageText:@"Unable to find default application to open temporary response file!"];
             [alert setAlertStyle:NSWarningAlertStyle];
             [alert runModal];
         }

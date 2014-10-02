@@ -15,6 +15,7 @@
 #import "HighlightedTextView.h"
 #import "WelcomeController.h"
 #import "TableRowAndColumn.h"
+#import "CRCSyntaxHighlightView.h"
 
 extern NSString* const FOLLOW_REDIRECTS;
 extern NSString* const RESPONSE_TIMEOUT;
@@ -23,31 +24,31 @@ extern NSString* const RESPONSE_TIMEOUT;
 @class CRCDrawerView;
 
 @interface CocoaRestClientAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDelegate, NSTableViewDataSource> {
-    NSWindow *window;
+    NSWindow *__strong window;
 	
-	NSComboBox *urlBox;
-	NSButton *submitButton;
-	NSTextView *requestText;
-	NSTextView *responseText;
-    WebView *responseWebView;
-    NSTextView *requestHeadersSentText;
-	NSTabViewItem *headersTab;
-	NSTextView *responseTextHeaders;
-    NSComboBox *methodButton;
-	TabbingTableView *headersTableView;
-	TabbingTableView *filesTableView;
-	TabbingTableView *paramsTableView;
-    HighlightedTextView *responseView;
-    HighlightedTextView *requestView;
-	NSComboBox *responseSyntaxBox;
+	NSComboBox *__strong urlBox;
+	NSButton *__strong submitButton;
+	NSTextView *__strong requestText;
+	NSTextView *__strong responseText;
+    WebView *__strong responseWebView;
+    NSTextView *__strong requestHeadersSentText;
+	NSTabViewItem *__strong headersTab;
+	NSTextView *__strong responseTextHeaders;
+    NSComboBox *__strong methodButton;
+	TabbingTableView *__strong headersTableView;
+	TabbingTableView *__strong filesTableView;
+	TabbingTableView *__strong paramsTableView;
+    HighlightedTextView *__strong responseView;
+    HighlightedTextView *__strong requestView;
+	NSComboBox *__strong responseSyntaxBox;
     
-    NSTextView *requestTextPlain;
-    NSTextView *responseTextPlain;
-    NSScrollView *responseTextPlainView;
-    NSScrollView *requestTextPlainView;
+    NSTextView *__strong requestTextPlain;
+    NSTextView *__strong responseTextPlain;
+    NSScrollView *__strong responseTextPlainView;
+    NSScrollView *__strong requestTextPlainView;
     
-	NSTextField *username;
-	NSTextField *password;
+	NSTextField *__strong username;
+	NSTextField *__strong password;
     BOOL preemptiveBasicAuth;
 	
 	NSMutableData *receivedData;
@@ -58,36 +59,36 @@ extern NSString* const RESPONSE_TIMEOUT;
 	NSMutableArray *filesTable;
 	NSMutableArray *paramsTable;
 	
-	NSDrawer *savedRequestsDrawer;
+	NSDrawer *__strong savedRequestsDrawer;
 	NSMutableArray *savedRequestsArray;
-	NSOutlineView *savedOutlineView;
+	NSOutlineView *__strong savedOutlineView;
 	
-	NSPanel *saveRequestSheet;
-	NSTextField *saveRequestTextField;
+	NSPanel *__strong saveRequestSheet;
+	NSTextField *__strong saveRequestTextField;
 	
-	NSPanel *timeoutSheet;
-	NSTextField *timeoutField;
+	NSPanel *__strong timeoutSheet;
+	NSTextField *__strong timeoutField;
 	
 	ExportRequestsController *exportRequestsController;
     
     BOOL allowSelfSignedCerts;
     NSURLRequest *currentRequest;
     
-	NSButton *plusParam;
-	NSButton *minusParam;
+	NSButton *__strong plusParam;
+	NSButton *__strong minusParam;
 	BOOL rawRequestInput;
-	NSTabView *tabView;
-	NSTabViewItem *reqHeadersTab;
+	NSTabView *__strong tabView;
+	NSTabViewItem *__strong reqHeadersTab;
 	NSDate *startDate;
-	NSTextField *status;
-    NSProgressIndicator *progressIndicator;
+	NSTextField *__strong status;
+    NSProgressIndicator *__strong progressIndicator;
     
-    CRCDrawerView *drawerView;
+    CRCDrawerView *__strong drawerView;
     PreferencesController *preferencesController;
     WelcomeController *welcomeController;
     
-    NSMenuItem *syntaxHighlightingMenuItem;
-    NSMenuItem *reGetResponseMenuItem;
+    NSMenuItem *__strong syntaxHighlightingMenuItem;
+    NSMenuItem *__strong reGetResponseMenuItem;
     
     @private CRCRequest *lastRequest;
     
@@ -109,48 +110,50 @@ extern NSString* const RESPONSE_TIMEOUT;
 @property (nonatomic, readonly) NSMutableArray *filesTable;
 @property (nonatomic, readonly) NSMutableArray *paramsTable;
 
-@property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSComboBox *urlBox;
-@property (assign) IBOutlet NSButton *submitButton;
-@property (assign) IBOutlet NSTextView *responseText;
+@property (strong) IBOutlet NSWindow *window;
+@property (strong) IBOutlet NSComboBox *urlBox;
+@property (strong) IBOutlet NSButton *submitButton;
+@property (strong) IBOutlet NSTextView *responseText;
 
-@property (assign) IBOutlet WebView *responseWebView;
-@property (assign) IBOutlet HighlightedTextView *responseView;
-@property (assign) IBOutlet NSComboBox *responseSyntaxBox;
-@property (assign) IBOutlet HighlightedTextView *requestView;
-@property (assign) IBOutlet NSTextView *responseTextHeaders;
-@property (assign) IBOutlet NSComboBox *methodButton;
-@property (assign) IBOutlet NSTextView *requestText;
-@property (assign) IBOutlet TabbingTableView *headersTableView;
-@property (assign) IBOutlet TabbingTableView *filesTableView;
-@property (assign) IBOutlet TabbingTableView *paramsTableView;
-@property (assign) IBOutlet NSTextField *username;
-@property (assign) IBOutlet NSTextField *password;
+@property (strong) IBOutlet WebView *responseWebView;
+@property (retain) IBOutlet HighlightedTextView *responseView;
+@property (strong) IBOutlet NSComboBox *responseSyntaxBox;
+@property (strong) IBOutlet HighlightedTextView *requestView;
+@property (strong) IBOutlet NSTextView *responseTextHeaders;
+@property (strong) IBOutlet NSComboBox *methodButton;
+@property (strong) IBOutlet NSTextView *requestText;
+@property (strong) IBOutlet TabbingTableView *headersTableView;
+@property (strong) IBOutlet TabbingTableView *filesTableView;
+@property (strong) IBOutlet TabbingTableView *paramsTableView;
+@property (strong) IBOutlet NSTextField *username;
+@property (strong) IBOutlet NSTextField *password;
 @property (assign) BOOL preemptiveBasicAuth;
-@property (assign) IBOutlet NSOutlineView *savedOutlineView;
-@property (assign) IBOutlet NSPanel *saveRequestSheet;
-@property (assign) IBOutlet NSTextField *saveRequestTextField;
-@property (assign) IBOutlet NSDrawer *savedRequestsDrawer;
-@property (assign) IBOutlet NSTabViewItem *headersTab;
-@property (assign) IBOutlet NSPanel *timeoutSheet;
-@property (assign) IBOutlet NSTextField *timeoutField;
-@property (assign) IBOutlet NSButton *plusParam;
-@property (assign) IBOutlet NSButton *minusParam;
+@property (strong) IBOutlet NSOutlineView *savedOutlineView;
+@property (strong) IBOutlet NSPanel *saveRequestSheet;
+@property (strong) IBOutlet NSTextField *saveRequestTextField;
+@property (strong) IBOutlet NSDrawer *savedRequestsDrawer;
+@property (strong) IBOutlet NSTabViewItem *headersTab;
+@property (strong) IBOutlet NSPanel *timeoutSheet;
+@property (strong) IBOutlet NSTextField *timeoutField;
+@property (strong) IBOutlet NSButton *plusParam;
+@property (strong) IBOutlet NSButton *minusParam;
 @property (assign) BOOL rawRequestInput;
-@property (assign) IBOutlet NSTabView *tabView;
-@property (assign) IBOutlet NSTabViewItem *reqHeadersTab;
-@property (assign) IBOutlet NSTextField *status;
-@property (assign) IBOutlet NSTextView *requestHeadersSentText;
-@property (assign) IBOutlet NSProgressIndicator *progressIndicator;
-@property (assign) IBOutlet CRCDrawerView *drawerView;
-@property (retain) PreferencesController *preferencesController;
-@property (assign) IBOutlet NSTextView *requestTextPlain;
-@property (assign) IBOutlet NSTextView *responseTextPlain;
-@property (assign) IBOutlet NSScrollView *responseTextPlainView;
-@property (assign) IBOutlet NSScrollView *requestTextPlainView;
-@property (assign) IBOutlet NSMenuItem *syntaxHighlightingMenuItem;
-@property (assign) IBOutlet NSMenuItem *reGetResponseMenuItem;
-@property (retain) WelcomeController *welcomeController;
+@property (strong) IBOutlet NSTabView *tabView;
+@property (strong) IBOutlet NSTabViewItem *reqHeadersTab;
+@property (strong) IBOutlet NSTextField *status;
+@property (strong) IBOutlet NSTextView *requestHeadersSentText;
+@property (strong) IBOutlet NSProgressIndicator *progressIndicator;
+@property (strong) IBOutlet CRCDrawerView *drawerView;
+@property (strong) PreferencesController *preferencesController;
+@property (strong) IBOutlet NSTextView *requestTextPlain;
+@property (strong) IBOutlet NSTextView *responseTextPlain;
+@property (strong) IBOutlet NSScrollView *responseTextPlainView;
+@property (strong) IBOutlet NSScrollView *requestTextPlainView;
+@property (strong) IBOutlet NSMenuItem *syntaxHighlightingMenuItem;
+@property (strong) IBOutlet NSMenuItem *reGetResponseMenuItem;
+@property (strong) WelcomeController *welcomeController;
+
+@property IBOutlet CRCSyntaxHighlightView *highlightView;
 
 - (IBAction) runSubmit:(id)sender;
 - (IBAction) doubleClickedHeaderRow:(id)sender;

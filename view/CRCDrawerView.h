@@ -12,9 +12,9 @@
 @class CocoaRestClientAppDelegate;
 
 @interface CRCDrawerView : NSView {
-    CocoaRestClientAppDelegate *cocoaRestClientAppDelegate;
+    CocoaRestClientAppDelegate *__strong cocoaRestClientAppDelegate;
 }
 
-@property (assign, atomic) CocoaRestClientAppDelegate *cocoaRestClientAppDelegate;
+@property (strong, atomic) CocoaRestClientAppDelegate *cocoaRestClientAppDelegate;
 
 @end

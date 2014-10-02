@@ -46,14 +46,14 @@
     //
     // see MGSFragaria.h for details
     //
-    [fragaria setObject:[NSNumber numberWithBool:YES] forKey:MGSFOIsSyntaxColoured];
-    [fragaria setObject:[NSNumber numberWithBool:YES] forKey:MGSFOShowLineNumberGutter];
-    [fragaria setObject:self forKey:MGSFODelegate];
-    [fragaria setObject:@"JavaScript" forKey:MGSFOSyntaxDefinitionName];
+    //[fragaria setObject:[NSNumber numberWithBool:YES] forKey:MGSFOIsSyntaxColoured];
+    //[fragaria setObject:[NSNumber numberWithBool:YES] forKey:MGSFOShowLineNumberGutter];
+    //[fragaria setObject:self forKey:MGSFODelegate];
+    //[fragaria setObject:@"JavaScript" forKey:MGSFOSyntaxDefinitionName];
     // embed editor in editView
-    [fragaria embedInView:self];
+    //[fragaria embedInView:self];
     
-    self.textView = [fragaria objectForKey:ro_MGSFOTextView];
+    //self.textView = [fragaria objectForKey:ro_MGSFOTextView];
 }
 
 -(id) initWithFrame:(NSRect)frameRect {
@@ -86,15 +86,16 @@
         newSyntaxName =[syntaxForMIME objectForKey:syntaxMIME];
     }
     NSLog(@"Setting syntax to %@", newSyntaxName);
-    [fragaria setObject:newSyntaxName forKey:MGSFOSyntaxDefinitionName];
+    //[fragaria setObject:newSyntaxName forKey:MGSFOSyntaxDefinitionName];
 }
 
 - (void) setSyntaxMode: (NSString *)language {
-    [fragaria setObject: language forKey: MGSFOSyntaxDefinitionName];
+    NSLog(@"sdf");
+    //[fragaria setObject: language forKey: MGSFOSyntaxDefinitionName];
 }
 
 - (NSString *) syntaxMode {
-    return [fragaria objectForKey:MGSFOSyntaxDefinitionName];
+    //return [fragaria objectForKey:MGSFOSyntaxDefinitionName];
 }
 
 @end

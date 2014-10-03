@@ -94,8 +94,8 @@
     //[fragaria setObject: language forKey: MGSFOSyntaxDefinitionName];
 }
 
-- (NSString *) syntaxMode {
+/*- (NSString *) syntaxMode {
     //return [fragaria objectForKey:MGSFOSyntaxDefinitionName];
-}
+}*/
 
 @end

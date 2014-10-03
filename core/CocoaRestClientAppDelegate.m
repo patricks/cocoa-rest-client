@@ -583,7 +583,7 @@ static CRCContentType requestContentType;
 				NSLog(@"Error reading response: %@", error);
                 needToPrintPlain = YES;
 			} else {
-                [responseText setString:[responseXML XMLStringWithOptions:NSXMLNodePrettyPrint]];
+                [highlightView setRawContent:[responseXML XMLStringWithOptions:NSXMLNodePrettyPrint]];
                 needToPrintPlain = NO;
             }
 		} else if ([jsonContentTypes containsObject:contentType]) {
@@ -594,7 +594,7 @@ static CRCContentType requestContentType;
 			id jsonObj = [parser objectWithString:jsonStringFromData];
             if (jsonObj) {
                 NSString *jsonFormattedString = [[NSString alloc] initWithString:[parser stringWithObject:jsonObj]]; 
-                [responseText setString:jsonFormattedString];
+                [highlightView setRawContent:jsonFormattedString];
                 needToPrintPlain = NO;
             }
 		} else if ([msgPackContentTypes containsObject:contentType]) {
@@ -607,7 +607,7 @@ static CRCContentType requestContentType;
             id jsonObj = [parser objectWithString:parsedObjectFromMsgPack];
             if (jsonObj) {
                 NSString *jsonFormattedString = [[NSString alloc] initWithString:[parser stringWithObject:jsonObj]];
-                [responseText setString:jsonFormattedString];
+                [highlightView setRawContent:jsonFormattedString];
                 needToPrintPlain = NO;
             }
             
@@ -632,7 +632,7 @@ static CRCContentType requestContentType;
         }
 	}
     
-    [responseSyntaxBox selectItemWithObjectValue:[responseView syntaxMode]];
+    //[responseSyntaxBox selectItemWithObjectValue:[responseView syntaxMode]];
     [progressIndicator stopAnimation:self];
     [progressIndicator setHidden:YES];
 }
@@ -715,8 +715,10 @@ static CRCContentType requestContentType;
 	[picker setCanChooseFiles:YES];
 	[picker setCanChooseDirectories:NO];
 	[picker setAllowsMultipleSelection:NO];
+    
+    
 	
-	if ( [picker runModalForDirectory:nil file:nil] == NSOKButton ) {
+	if ( [picker runModal] == NSOKButton ) {
 		for(NSURL* url in [picker URLs]) {
 			[self addFileToFilesTable:url];
 		}
@@ -965,7 +967,7 @@ static CRCContentType requestContentType;
     }
     
     NSPasteboardItem *pboardItem = [[NSPasteboardItem alloc] init];
-    NSString *idStr = [NSString stringWithFormat:@"%p", (long) item];
+    NSString *idStr = [NSString stringWithFormat:@"%ld", (long) item];
     [pboardItem setString:idStr forType: @"public.text"];
     NSLog(@"%@", idStr);
     
@@ -994,7 +996,7 @@ static CRCContentType requestContentType;
     int sourceIndex = -1;
     
     for (id entry in savedRequestsArray) {
-        if ([[NSString stringWithFormat:@"%p", (long) entry] isEqualToString:objId]) {
+        if ([[NSString stringWithFormat:@"%ld", (long) entry] isEqualToString:objId]) {
             sourceItem = entry;
             sourceIndex = [savedRequestsArray indexOfObject:sourceItem];
         } else if ([entry isKindOfClass:[CRCSavedRequestFolder class]]) {
@@ -1323,7 +1325,7 @@ static CRCContentType requestContentType;
     
     NSMutableArray *loadedRequests = [[NSMutableArray alloc] init];
     
-    if ( [picker runModalForDirectory:nil file:nil] == NSOKButton ) {
+    if ( [picker runModal] == NSOKButton ) {
         @try {
             for(NSURL* url in [picker URLs]) {
                 NSString *path = [url path];
@@ -1450,7 +1452,7 @@ static CRCContentType requestContentType;
     NSSavePanel* picker = [NSSavePanel savePanel];
 	
     if ( [picker runModal] == NSOKButton ) {
-		NSString* path = [picker filename];
+		NSString* path = [picker URL].path;
         NSLog(@"Saving requests to %@", path);
         
         NSError *error;

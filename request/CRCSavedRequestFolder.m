@@ -47,12 +47,12 @@
  */
 - (id) findObjectWith:(NSString *) objId {
     id object = nil;
-    if ([[NSString stringWithFormat:@"%p", (long) self] isEqualToString:objId]) {
+    if ([[NSString stringWithFormat:@"%ld", (long) self] isEqualToString:objId]) {
         object = self;
     } else {
         for (id entry in contents) {
             if (! [entry isKindOfClass:[CRCSavedRequestFolder class]]) {
-                if ([[NSString stringWithFormat:@"%p", (long) entry] isEqualToString:objId]) {
+                if ([[NSString stringWithFormat:@"%ld", (long) entry] isEqualToString:objId]) {
                     object = entry;
                 }
             } else {
@@ -102,7 +102,7 @@
 - (id) findParentOfObjectWith:(NSString *) objId {
     id parentId = nil;
     for (id entry in contents) {
-        if ([[NSString stringWithFormat:@"%p", (long) entry] isEqualToString:objId]) {
+        if ([[NSString stringWithFormat:@"%ld", (long) entry] isEqualToString:objId]) {
             parentId = self;
         } else if ([entry isKindOfClass:[CRCSavedRequestFolder class]]) {
             id recursiveParentId = [((CRCSavedRequestFolder *)entry) findParentOfObjectWith:objId];

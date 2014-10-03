@@ -10,7 +10,9 @@
 #import "GTMNSString+HTML.h"
 #import <WebKit/WebKit.h>
 
-@interface CRCSyntaxHighlightView : WebView
+@interface CRCSyntaxHighlightView : WebView {
+}
+
 
 - (void)setRawContent:(NSString*)theContent;
 

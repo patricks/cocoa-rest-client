@@ -3,7 +3,7 @@
 
 
 @interface CRCTopView : NSView {
-
+    NSGradient                  *bgGradient;
 }
 
 @end

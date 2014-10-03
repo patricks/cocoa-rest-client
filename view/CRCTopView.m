@@ -6,7 +6,8 @@
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code here.
+         bgGradient = [[NSGradient alloc]initWithStartingColor:[NSColor alternateSelectedControlColor]
+                                                   endingColor:[NSColor keyboardFocusIndicatorColor]];
     }
     return self;
 }
@@ -17,19 +18,7 @@
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
-    NSImage * image   = [NSImage imageNamed:@"background-header.png"];
-	NSRect imageRect  = (NSRect){NSZeroPoint, [image size]};
-	NSRect originRect = (NSRect){NSZeroPoint, [self bounds].size};
-	
-	//NSColor * background = [NSColor colorWithPatternImage:image];
-	//[background set];
-	//NSRectFill([self bounds]);
-	
-	[image drawInRect:originRect 
-			 fromRect:imageRect 
-			operation:NSCompositeSourceOver 
-			 fraction:1];
-	
+    [bgGradient drawInRect:self.bounds angle:90];
 }
 
 @end

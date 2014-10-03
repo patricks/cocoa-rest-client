@@ -7,13 +7,11 @@
 //
 
 #import "HighlightedTextView.h"
-#import <MGSFragaria/MGSFragaria.h>
 
 @implementation HighlightedTextView
 @synthesize textView;
 
 -(void) initHighlightedFrame {
-    fragaria = [[MGSFragaria alloc] init];
     syntaxForMIME = [NSDictionary dictionaryWithObjectsAndKeys:
                      @"JavaScript", @"application/json",
                      @"MsgPack", @"application/x-msgpack",
@@ -39,8 +37,8 @@
     //
     // see MGSFragariaPreferences.h for details
     //
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:MGSPrefsAutocompleteSuggestAutomatically];	
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:NO] forKey:MGSPrefsLineWrapNewDocuments];	
+    //[[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:MGSPrefsAutocompleteSuggestAutomatically];
+   // [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:NO] forKey:MGSPrefsLineWrapNewDocuments];
     
     // define initial object configuration
     //
@@ -72,12 +70,12 @@
 
 -(NSString*) syntaxMIME {
     __block NSString * result;
-    [syntaxForMIME enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSString* obj, BOOL *stop) {
+    /*[syntaxForMIME enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSString* obj, BOOL *stop) {
         if([obj isEqualToString: [fragaria objectForKey:MGSFOSyntaxDefinitionName]]) {
             result = key;
         }
-    }];
-    return result;
+    }];*/
+    return nil;
 }
 
 -(void) setSyntaxMIME:(NSString *)syntaxMIME {

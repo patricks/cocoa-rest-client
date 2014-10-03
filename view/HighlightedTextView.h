@@ -7,11 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <MGSFragaria/MGSFragaria.h>
 
 @interface HighlightedTextView : NSView {
     
-    MGSFragaria *fragaria;
     NSDictionary *syntaxForMIME;
     NSTextView *__strong textView;
     

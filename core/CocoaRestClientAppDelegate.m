@@ -14,7 +14,6 @@
 #import <Foundation/Foundation.h>
 #import "JSON.h"
 #import <Sparkle/SUUpdater.h>
-#import <MGSFragaria/MGSSyntaxController.h>
 #import "MessagePack.h"
 #import "NSData+Base64.h"
 #import "TableRowAndColumn.h"
@@ -239,8 +238,8 @@ static CRCContentType requestContentType;
     [responseTextPlain setEditable:NO];
     [reGetResponseMenuItem setEnabled:NO];
     
-    MGSSyntaxController *syn = [[MGSSyntaxController alloc] init];
-    [responseSyntaxBox addItemsWithObjectValues: [syn syntaxDefinitionNames]];
+    //MGSSyntaxController *syn = [[MGSSyntaxController alloc] init];
+    //[responseSyntaxBox addItemsWithObjectValues: [syn syntaxDefinitionNames]];
     [responseSyntaxBox addItemWithObjectValue:@"MsgPack"];
     [responseSyntaxBox selectItemWithObjectValue: @"JavaScript"];
     

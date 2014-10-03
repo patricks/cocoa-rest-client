@@ -34,6 +34,7 @@
 		983DC81719DDD06F001CC18E /* CRCSyntaxHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 983DC81619DDD06F001CC18E /* CRCSyntaxHighlightView.m */; };
 		983DC81A19DDD690001CC18E /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 983DC81919DDD690001CC18E /* GTMNSString+HTML.m */; };
 		983DC81C19DDDD26001CC18E /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 983DC81B19DDDD26001CC18E /* template.html */; };
+		987E0E8719DF32B9008FDB42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 987E0E8619DF32B9008FDB42 /* Images.xcassets */; };
 		AF074F5810F595AF00EE44D8 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AF074F4D10F595AF00EE44D8 /* NSObject+SBJSON.m */; };
 		AF074F5910F595AF00EE44D8 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AF074F4F10F595AF00EE44D8 /* NSString+SBJSON.m */; };
 		AF074F5A10F595AF00EE44D8 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AF074F5110F595AF00EE44D8 /* SBJSON.m */; };
@@ -163,6 +164,7 @@
 		983DC81819DDD690001CC18E /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+HTML.h"; path = "CRCSyntaxHighlighterView/GTMNSString+HTML.h"; sourceTree = "<group>"; };
 		983DC81919DDD690001CC18E /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+HTML.m"; path = "CRCSyntaxHighlighterView/GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		983DC81B19DDDD26001CC18E /* template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = template.html; path = CRCSyntaxHighlighterView/template.html; sourceTree = "<group>"; };
+		987E0E8619DF32B9008FDB42 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CocoaRestClient/Images.xcassets; sourceTree = "<group>"; };
 		AF074F4B10F595AF00EE44D8 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = JSON/JSON.h; sourceTree = "<group>"; };
 		AF074F4C10F595AF00EE44D8 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJSON.h"; path = "JSON/NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		AF074F4D10F595AF00EE44D8 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJSON.m"; path = "JSON/NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				987E0E8619DF32B9008FDB42 /* Images.xcassets */,
 				AFCE79561419B54600E22468 /* dsa_pub.pem */,
 				AFE1837612E394E5001B1B29 /* LICENSE.txt */,
 				AF7A149A113B583A00F0D6F5 /* cocoaRestClient.icns */,
@@ -547,6 +550,7 @@
 				AFBF08BD14C1E9BB000E7411 /* ExportRequests.xib in Resources */,
 				AFBB7D4B14F98B4000424C12 /* Preferences.xib in Resources */,
 				AFA11AB515CEDA3600831738 /* Welcome.xib in Resources */,
+				987E0E8719DF32B9008FDB42 /* Images.xcassets in Resources */,
 				AFA11ACD15CF036300831738 /* motd.txt in Resources */,
 				510FDE5E17036FDC0024972E /* readme.md in Resources */,
 			);
@@ -644,6 +648,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -671,6 +676,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

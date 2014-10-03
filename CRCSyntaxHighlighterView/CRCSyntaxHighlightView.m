@@ -23,13 +23,14 @@
                                                                  encoding:NSUTF8StringEncoding
                                                                     error:nil]
                                 baseURL:base];
+        [self.enclosingScrollView setBorderType:NSGrooveBorder];
 
     }
     return self;
 }
 
 - (void)awakeFromNib {
-
+    [self.enclosingScrollView setBorderType:NSGrooveBorder];
 }
 
 - (void)setRawContent:(NSString *)theContent {
@@ -42,9 +43,5 @@
     [[self mainFrame]loadHTMLString:template baseURL:base];
 }
 
-- (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
-
-  
-}
 
 @end

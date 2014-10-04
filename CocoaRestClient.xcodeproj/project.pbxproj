@@ -29,6 +29,9 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		982803F619E092770022525C /* CRCPresetsTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 982803F519E092770022525C /* CRCPresetsTableDelegate.m */; };
+		982803F919E096840022525C /* CRCPresetTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 982803F819E096840022525C /* CRCPresetTableCellView.m */; };
+		982803FD19E0A50D0022525C /* CRCRoundedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 982803FC19E0A50D0022525C /* CRCRoundedTextField.m */; };
 		983DC81719DDD06F001CC18E /* CRCSyntaxHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 983DC81619DDD06F001CC18E /* CRCSyntaxHighlightView.m */; };
 		983DC81A19DDD690001CC18E /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 983DC81919DDD690001CC18E /* GTMNSString+HTML.m */; };
 		983DC81C19DDDD26001CC18E /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 983DC81B19DDDD26001CC18E /* template.html */; };
@@ -143,6 +146,12 @@
 		5704EECF155C7BF400C55656 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* CocoaRestClient-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CocoaRestClient-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Cocoa REST Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocoa REST Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		982803F419E092770022525C /* CRCPresetsTableDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCPresetsTableDelegate.h; path = CRCPresetsClasses/CRCPresetsTableDelegate.h; sourceTree = "<group>"; };
+		982803F519E092770022525C /* CRCPresetsTableDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCPresetsTableDelegate.m; path = CRCPresetsClasses/CRCPresetsTableDelegate.m; sourceTree = "<group>"; };
+		982803F719E096840022525C /* CRCPresetTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCPresetTableCellView.h; path = CRCPresetsClasses/CRCPresetTableCellView.h; sourceTree = "<group>"; };
+		982803F819E096840022525C /* CRCPresetTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCPresetTableCellView.m; path = CRCPresetsClasses/CRCPresetTableCellView.m; sourceTree = "<group>"; };
+		982803FB19E0A50D0022525C /* CRCRoundedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCRoundedTextField.h; path = view/CRCRoundedTextField.h; sourceTree = "<group>"; };
+		982803FC19E0A50D0022525C /* CRCRoundedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCRoundedTextField.m; path = view/CRCRoundedTextField.m; sourceTree = "<group>"; };
 		983DC81519DDD06F001CC18E /* CRCSyntaxHighlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCSyntaxHighlightView.h; path = CRCSyntaxHighlighterView/CRCSyntaxHighlightView.h; sourceTree = "<group>"; };
 		983DC81619DDD06F001CC18E /* CRCSyntaxHighlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCSyntaxHighlightView.m; path = CRCSyntaxHighlighterView/CRCSyntaxHighlightView.m; sourceTree = "<group>"; };
 		983DC81819DDD690001CC18E /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+HTML.h"; path = "CRCSyntaxHighlighterView/GTMNSString+HTML.h"; sourceTree = "<group>"; };
@@ -389,9 +398,19 @@
 			path = msgpack;
 			sourceTree = "<group>";
 		};
+		982803FA19E0A4DF0022525C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				982803FB19E0A50D0022525C /* CRCRoundedTextField.h */,
+				982803FC19E0A50D0022525C /* CRCRoundedTextField.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		987E0E8819DF5B48008FDB42 /* CRCPresetsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				982803FA19E0A4DF0022525C /* UI */,
 				987E0E8919DF5B76008FDB42 /* CRCPresetsController.h */,
 				987E0E8A19DF5B76008FDB42 /* CRCPresetsController.m */,
 				987E0E8C19DF6028008FDB42 /* CRCPreset.h */,
@@ -404,6 +423,10 @@
 				98D9C1A419DFCABB00907991 /* CRCSavePresetWindow.m */,
 				98D9C1A619DFD01100907991 /* CRCCreateProjectWindow.h */,
 				98D9C1A719DFD01100907991 /* CRCCreateProjectWindow.m */,
+				982803F419E092770022525C /* CRCPresetsTableDelegate.h */,
+				982803F519E092770022525C /* CRCPresetsTableDelegate.m */,
+				982803F719E096840022525C /* CRCPresetTableCellView.h */,
+				982803F819E096840022525C /* CRCPresetTableCellView.m */,
 			);
 			name = CRCPresetsClasses;
 			sourceTree = "<group>";
@@ -583,6 +606,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				983DC81A19DDD690001CC18E /* GTMNSString+HTML.m in Sources */,
+				982803FD19E0A50D0022525C /* CRCRoundedTextField.m in Sources */,
 				98D9C1A519DFCABB00907991 /* CRCSavePresetWindow.m in Sources */,
 				AF1FC48410F435BD00ED5A57 /* CheckableRequestWrapper.m in Sources */,
 				AF074F5810F595AF00EE44D8 /* NSObject+SBJSON.m in Sources */,
@@ -592,6 +616,7 @@
 				AF074F5A10F595AF00EE44D8 /* SBJSON.m in Sources */,
 				AF074F5B10F595AF00EE44D8 /* SBJsonBase.m in Sources */,
 				AF074F5C10F595AF00EE44D8 /* SBJsonParser.m in Sources */,
+				982803F919E096840022525C /* CRCPresetTableCellView.m in Sources */,
 				AF074F5D10F595AF00EE44D8 /* SBJsonWriter.m in Sources */,
 				D7AC588711E60DDA00D67635 /* CRCMultipartRequest.m in Sources */,
 				D714A01D11E8BF7700F5A80B /* CRCFormEncodedRequest.m in Sources */,
@@ -626,6 +651,7 @@
 				AF7CE5A617618BF80080363B /* NSData+Base64.m in Sources */,
 				AF7CE5C71766CBC10080363B /* TableRowAndColumn.m in Sources */,
 				AFBBA03E18D4AB93002E7036 /* CRCSavedRequestFolder.m in Sources */,
+				982803F619E092770022525C /* CRCPresetsTableDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

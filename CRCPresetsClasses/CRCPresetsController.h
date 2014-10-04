@@ -13,6 +13,7 @@
 #import "CRCSavePresetWindow.h"
 #import "CRCCreateProjectWindow.h"
 #import "CRCProjectsArrayController.h"
+#import "CocoaRestClientAppDelegate.h"
 
 static NSString *kProjectsUserDefaultsKey = @"CRCProjects";
 

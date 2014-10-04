@@ -68,15 +68,13 @@
     }
     CRCPreset *newPreset = [[CRCPreset alloc]init];
     newPreset.name = @"Untitled Preset";
+    
     self.temporaryPreset = newPreset;
+    newPreset.request = [CRCRequest requestWithApplication:[NSApplication sharedApplication].delegate];
     
     [[NSApp mainWindow] beginSheet:self.addPresetWindow
     completionHandler:^(NSModalResponse returnCode) {
         if (returnCode == NSModalResponseOK) {
-            CRCProject *selectedProject = [self.projectsArrayController.selectedObjects objectAtIndex:0];
-            /*[selectedProject willChangeValueForKey:@"presets"];
-            [selectedProject.presets addObject:newPreset];
-            [selectedProject didChangeValueForKey:@"presets"];*/
             [self addNewPreset:newPreset];
         }
     }];
@@ -101,6 +99,7 @@
 #pragma mark Adding and Removing projects and presets
 
 - (void)addNewProject:(CRCProject*)theProject {
+    if (nil == self.projectsArray) self.projectsArray = [NSMutableArray array];
     [self.projectsArrayController addObject:theProject];
     [self saveModificationsToDisk];
 }

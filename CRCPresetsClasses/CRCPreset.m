@@ -26,6 +26,8 @@
     [coder encodeObject:self.name forKey:kPresetKeyName];
     [coder encodeObject:self.method forKey:kPresetKeyMethod];
     [coder encodeObject:self.url forKey:kPresetKeyURL];
+    [coder encodeObject:self.request forKey:kPresetKeyRequest];
+    
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -35,6 +37,7 @@
         _name = [coder decodeObjectForKey:kPresetKeyName];
         _url = [coder decodeObjectForKey:kPresetKeyURL];
         _method = [coder decodeObjectForKey:kPresetKeyMethod];
+        _request = [coder decodeObjectForKey:kPresetKeyRequest];
     }
     return self;
 }

@@ -197,6 +197,17 @@
                                                     </tableColumns>
                                                     <connections>
                                                         <binding destination="CcV-BD-Nda" name="content" keyPath="arrangedObjects" id="LWJ-jA-zg5"/>
+                                                        <binding destination="CcV-BD-Nda" name="doubleClickArgument" keyPath="selection.request" id="uXy-Gk-Puy">
+                                                            <dictionary key="options">
+                                                                <string key="NSSelectorName">loadSavedRequest:</string>
+                                                            </dictionary>
+                                                        </binding>
+                                                        <binding destination="-2" name="doubleClickTarget" keyPath="self" previousBinding="uXy-Gk-Puy" id="dx0-we-AdN">
+                                                            <dictionary key="options">
+                                                                <string key="NSSelectorName">loadSavedRequest:</string>
+                                                            </dictionary>
+                                                        </binding>
+                                                        <binding destination="CcV-BD-Nda" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="LWJ-jA-zg5" id="DNb-vd-CHV"/>
                                                     </connections>
                                                 </tableView>
                                             </subviews>

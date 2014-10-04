@@ -102,6 +102,11 @@
                  }];
 }
 
+- (void)loadSavedRequest:(CRCRequest*)request {
+    CocoaRestClientAppDelegate *del = (CocoaRestClientAppDelegate*)[NSApplication sharedApplication].delegate;
+    [del loadSavedRequest:request];
+}
+
 #pragma mark -
 #pragma mark Adding and Removing projects and presets
 

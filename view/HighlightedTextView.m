@@ -69,7 +69,7 @@
 }
 
 -(NSString*) syntaxMIME {
-    __block NSString * result;
+    //__block NSString * result;
     /*[syntaxForMIME enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSString* obj, BOOL *stop) {
         if([obj isEqualToString: [fragaria objectForKey:MGSFOSyntaxDefinitionName]]) {
             result = key;

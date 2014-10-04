@@ -165,7 +165,7 @@ extern NSString* const RESPONSE_TIMEOUT;
 - (IBAction) overwriteRequest:(id) sender;
 - (IBAction) doneSaveRequest:(id) sender;
 - (IBAction) createNewSavedFolder:(id)sender;
-- (void) loadSavedRequest:(NSDictionary *) request;
+- (void) loadSavedRequest:(id) request;
 - (IBAction) deleteSavedRequest:(id) sender;
 - (NSString *) pathForDataFile;
 - (void) loadDataFromDisk;

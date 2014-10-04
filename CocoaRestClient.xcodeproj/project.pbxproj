@@ -38,7 +38,7 @@
 		987E0E9119DF606E008FDB42 /* CRCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E0E9019DF606E008FDB42 /* CRCProject.m */; };
 		98CDDEE119DF676600BAFD67 /* NewProjectDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98CDDEE019DF676600BAFD67 /* NewProjectDialog.xib */; };
 		98CDDEE319DF9C5000BAFD67 /* PresetsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98CDDEE219DF9C5000BAFD67 /* PresetsWindow.xib */; };
-		98D9C19F19DFBDD700907991 /* CRCArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C19E19DFBDD700907991 /* CRCArrayController.m */; };
+		98D9C19F19DFBDD700907991 /* CRCProjectsArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C19E19DFBDD700907991 /* CRCProjectsArrayController.m */; };
 		98D9C1A519DFCABB00907991 /* CRCSavePresetWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C1A419DFCABB00907991 /* CRCSavePresetWindow.m */; };
 		98D9C1A819DFD01100907991 /* CRCCreateProjectWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C1A719DFD01100907991 /* CRCCreateProjectWindow.m */; };
 		AF074F5810F595AF00EE44D8 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AF074F4D10F595AF00EE44D8 /* NSObject+SBJSON.m */; };
@@ -157,8 +157,8 @@
 		987E0E9019DF606E008FDB42 /* CRCProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCProject.m; path = CRCPresetsClasses/CRCProject.m; sourceTree = "<group>"; };
 		98CDDEE019DF676600BAFD67 /* NewProjectDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewProjectDialog.xib; path = CRCPresetsClasses/NewProjectDialog.xib; sourceTree = "<group>"; };
 		98CDDEE219DF9C5000BAFD67 /* PresetsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PresetsWindow.xib; path = CRCPresetsClasses/PresetsWindow.xib; sourceTree = "<group>"; };
-		98D9C19D19DFBDD700907991 /* CRCArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCArrayController.h; path = CRCPresetsClasses/CRCArrayController.h; sourceTree = "<group>"; };
-		98D9C19E19DFBDD700907991 /* CRCArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCArrayController.m; path = CRCPresetsClasses/CRCArrayController.m; sourceTree = "<group>"; };
+		98D9C19D19DFBDD700907991 /* CRCProjectsArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCProjectsArrayController.h; path = CRCPresetsClasses/CRCProjectsArrayController.h; sourceTree = "<group>"; };
+		98D9C19E19DFBDD700907991 /* CRCProjectsArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCProjectsArrayController.m; path = CRCPresetsClasses/CRCProjectsArrayController.m; sourceTree = "<group>"; };
 		98D9C1A319DFCABB00907991 /* CRCSavePresetWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCSavePresetWindow.h; path = CRCPresetsClasses/CRCSavePresetWindow.h; sourceTree = "<group>"; };
 		98D9C1A419DFCABB00907991 /* CRCSavePresetWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCSavePresetWindow.m; path = CRCPresetsClasses/CRCSavePresetWindow.m; sourceTree = "<group>"; };
 		98D9C1A619DFD01100907991 /* CRCCreateProjectWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCCreateProjectWindow.h; path = CRCPresetsClasses/CRCCreateProjectWindow.h; sourceTree = "<group>"; };
@@ -398,8 +398,8 @@
 				987E0E8D19DF6028008FDB42 /* CRCPreset.m */,
 				987E0E8F19DF606E008FDB42 /* CRCProject.h */,
 				987E0E9019DF606E008FDB42 /* CRCProject.m */,
-				98D9C19D19DFBDD700907991 /* CRCArrayController.h */,
-				98D9C19E19DFBDD700907991 /* CRCArrayController.m */,
+				98D9C19D19DFBDD700907991 /* CRCProjectsArrayController.h */,
+				98D9C19E19DFBDD700907991 /* CRCProjectsArrayController.m */,
 				98D9C1A319DFCABB00907991 /* CRCSavePresetWindow.h */,
 				98D9C1A419DFCABB00907991 /* CRCSavePresetWindow.m */,
 				98D9C1A619DFD01100907991 /* CRCCreateProjectWindow.h */,
@@ -588,7 +588,7 @@
 				AF074F5810F595AF00EE44D8 /* NSObject+SBJSON.m in Sources */,
 				AF074F5910F595AF00EE44D8 /* NSString+SBJSON.m in Sources */,
 				98D9C1A819DFD01100907991 /* CRCCreateProjectWindow.m in Sources */,
-				98D9C19F19DFBDD700907991 /* CRCArrayController.m in Sources */,
+				98D9C19F19DFBDD700907991 /* CRCProjectsArrayController.m in Sources */,
 				AF074F5A10F595AF00EE44D8 /* SBJSON.m in Sources */,
 				AF074F5B10F595AF00EE44D8 /* SBJsonBase.m in Sources */,
 				AF074F5C10F595AF00EE44D8 /* SBJsonParser.m in Sources */,

@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CRCPreset : NSObject
+static NSString *kPresetKeyName     = @"CRCPresetName";
+static NSString *kPresetKeyURL      = @"CRCPresetURL";
+static NSString *kPresetKeyMethod   = @"CRCPresetMethod";
+
+@interface CRCPreset : NSObject <NSCoding>
 
 @property NSString              *name;
 @property NSURL                 *url;

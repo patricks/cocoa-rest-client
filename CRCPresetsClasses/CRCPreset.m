@@ -21,4 +21,22 @@
     return self;
 }
 
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.name forKey:kPresetKeyName];
+    [coder encodeObject:self.method forKey:kPresetKeyMethod];
+    [coder encodeObject:self.url forKey:kPresetKeyURL];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super init];
+    if (self) {
+        _name = [coder decodeObjectForKey:kPresetKeyName];
+        _url = [coder decodeObjectForKey:kPresetKeyURL];
+        _method = [coder decodeObjectForKey:kPresetKeyMethod];
+    }
+    return self;
+}
+
 @end

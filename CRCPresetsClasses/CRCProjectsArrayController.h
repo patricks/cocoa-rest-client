@@ -7,18 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CRCPresetsController.h"
 
-@interface CRCArrayController : NSArrayController
-
-
-/*
- 
- NSMutableArray
- 
- 
- NSBeep();
- 
- */
+@interface CRCProjectsArrayController : NSArrayController
 
 
 @end

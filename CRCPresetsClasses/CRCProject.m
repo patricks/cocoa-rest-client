@@ -8,7 +8,6 @@
 
 #import "CRCProject.h"
 
-static NSString *kCRCProjectKeyName = @"CRCProjectName";
 
 @implementation CRCProject
 
@@ -22,14 +21,22 @@ static NSString *kCRCProjectKeyName = @"CRCProjectName";
     }
     return self;
 }
-- (id)copyWithZone:(NSZone *)zone {
-    CRCProject *newProject = [[[self class]allocWithZone:zone]init];
-    if (newProject) {
-        newProject.name = @"Unnamed Project";
-    }
-    return newProject;
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.name forKey:kProjectKeyName];
+    [coder encodeObject:self.presets forKey:kProjectKeyPresets];
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super init];
+    if (self) {
+        _presets = [coder decodeObjectForKey:kProjectKeyPresets];
+        _name = [coder decodeObjectForKey:kProjectKeyName];
+    }
+    return self;
+}
 
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {

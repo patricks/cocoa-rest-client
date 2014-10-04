@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CRCProject : NSObject <NSCopying, NSCoding>
+static NSString *kProjectKeyName        = @"CRCProjectName";
+static NSString *kProjectKeyPresets     = @"CRCProjectPresets";
+
+@interface CRCProject : NSObject <NSCoding>
 
 @property NSMutableArray            *presets;
 @property NSString                  *name;

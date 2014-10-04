@@ -14,16 +14,35 @@
 {
     self = [super init];
     if (self) {
-        _projectsArray = [[[NSUserDefaults standardUserDefaults]arrayForKey:@"CRCPresets"]mutableCopy];
-        if (nil == _projectsArray) {
-            NSLog(@"Presets dictionary not found, probably first start after presets migration... Creating empty dict.");
-            _projectsArray = [[NSMutableArray alloc]init];
-            [[NSUserDefaults standardUserDefaults]setObject:_projectsArray forKey:@"CRCPresets"];
-        }
-    
+        
+        NSMutableArray *projects = [self loadProjectsFromUserDefaults];
+        NSLog(@"SDF");
+        self.projectsArray = projects;
+        // Instead of having to observe each and every current (and future) property
+        // in CRCProject and CRCpreset and synchronize when there is a change, it is easier to just
+        // synchronize the whole projects array every 10 seconds.
+        // This is not CPU/Disk consuming at all.
+        [NSTimer scheduledTimerWithTimeInterval:10
+                                         target:self
+                                       selector:@selector(saveModificationsToDisk)
+                                       userInfo:nil repeats:YES];
     }
     
     return self;
+}
+
+- (NSMutableArray*)loadProjectsFromUserDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [defaults objectForKey:kProjectsUserDefaultsKey];
+    NSMutableArray *projects = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    return projects;
+}
+
+- (void)saveModificationsToDisk {
+    NSData *encodedProjects = [NSKeyedArchiver archivedDataWithRootObject:self.projectsArray];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:encodedProjects forKey:kProjectsUserDefaultsKey];
+    [defaults synchronize];
 }
 
 - (IBAction)showPresetsPanel:(id)sender {
@@ -43,7 +62,7 @@
     return YES;
 }
 
-- (IBAction)saveRequest:(id)sender {
+- (IBAction)showSaveRequestSheet:(id)sender {
     if (nil == self.addPresetWindow) {
         [[NSBundle mainBundle]loadNibNamed:@"PresetsWindow" owner:self topLevelObjects:nil];
     }
@@ -55,14 +74,15 @@
     completionHandler:^(NSModalResponse returnCode) {
         if (returnCode == NSModalResponseOK) {
             CRCProject *selectedProject = [self.projectsArrayController.selectedObjects objectAtIndex:0];
-            [selectedProject willChangeValueForKey:@"presets"];
+            /*[selectedProject willChangeValueForKey:@"presets"];
             [selectedProject.presets addObject:newPreset];
-            [selectedProject didChangeValueForKey:@"presets"];
+            [selectedProject didChangeValueForKey:@"presets"];*/
+            [self addNewPreset:newPreset];
         }
     }];
 }
 
-- (IBAction)createProject:(id)sender {
+- (IBAction)showCreateProjectSheet:(id)sender {
     if (nil == self.createProjectWindow) {
         [[NSBundle mainBundle]loadNibNamed:@"PresetsWindow" owner:self topLevelObjects:nil];
     }
@@ -71,13 +91,28 @@
     self.temporaryProject = newProject;
     [self.addPresetWindow beginSheet:self.createProjectWindow
                  completionHandler:^(NSModalResponse returnCode) {
-                     //
-                     //self.createProjectWindow = nil;
                      if (returnCode == NSModalResponseOK) {
-                         [self.projectsArrayController addObject:self.temporaryProject];
-                         
+                         [self addNewProject:self.temporaryProject];
                      }
                  }];
+}
+
+#pragma mark -
+#pragma mark Adding and Removing projects and presets
+
+- (void)addNewProject:(CRCProject*)theProject {
+    [self.projectsArrayController addObject:theProject];
+    [self saveModificationsToDisk];
+}
+
+- (void)removeProject:(CRCProject*)theProject {
+    [self.projectsArrayController removeObject:theProject];
+    [self saveModificationsToDisk];
+}
+
+- (void)addNewPreset:(CRCPreset*)thePreset {
+    [self.presetsArrayController addObject:thePreset];
+    [self saveModificationsToDisk];
 }
 
 

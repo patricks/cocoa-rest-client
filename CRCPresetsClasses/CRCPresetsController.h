@@ -12,13 +12,19 @@
 #import <Cocoa/Cocoa.h>
 #import "CRCSavePresetWindow.h"
 #import "CRCCreateProjectWindow.h"
+#import "CRCProjectsArrayController.h"
+
+static NSString *kProjectsUserDefaultsKey = @"CRCProjects";
+
+@class CRCProjectsArrayController;
 
 @interface CRCPresetsController : NSObject <NSTableViewDelegate> {
 }
 
 @property (nonatomic) NSMutableArray        *projectsArray;
 @property IBOutlet NSPanel                  *presetsPanel;
-@property IBOutlet NSArrayController        *projectsArrayController;
+@property IBOutlet CRCProjectsArrayController        *projectsArrayController;
+@property IBOutlet NSArrayController        *presetsArrayController;
 @property IBOutlet CRCSavePresetWindow      *addPresetWindow;
 @property IBOutlet CRCCreateProjectWindow   *createProjectWindow;
 @property CRCPreset                         *temporaryPreset;

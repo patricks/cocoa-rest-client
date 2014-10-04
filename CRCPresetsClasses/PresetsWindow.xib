@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="addPresetWindow" destination="HJP-43-Bjy" id="xGU-iR-Dps"/>
                 <outlet property="createProjectWindow" destination="VKe-8w-Ta9" id="H6g-GJ-uAn"/>
+                <outlet property="presetsArrayController" destination="CcV-BD-Nda" id="e5p-FE-L5a"/>
                 <outlet property="presetsPanel" destination="QvC-M9-y7g" id="HWB-Rn-YuN"/>
                 <outlet property="projectsArrayController" destination="Lhr-BN-mfy" id="Xc8-16-Dsj"/>
             </connections>
@@ -39,7 +40,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" id="fWb-wK-dhK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="419" height="19"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="484" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -91,11 +92,11 @@
                                             </subviews>
                                             <nil key="backgroundColor"/>
                                         </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" appearanceType="vibrantLight" verticalHuggingPriority="750" horizontal="YES" id="5nc-PQ-mtn">
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="5nc-PQ-mtn">
                                             <rect key="frame" x="1" y="81.19542384147644" width="157" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" appearanceType="vibrantLight" verticalHuggingPriority="750" horizontal="NO" id="4KS-rh-0iU">
+                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="4KS-rh-0iU">
                                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
@@ -119,7 +120,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="14" id="Uv7-IJ-u5i">
-                                                    <rect key="frame" x="0.0" y="0.0" width="238" height="134"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="119" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -203,7 +204,7 @@
             </toolbar>
             <point key="canvasLocation" x="297" y="289"/>
         </window>
-        <arrayController objectClassName="CRCProject" automaticallyPreparesContent="YES" id="Lhr-BN-mfy" userLabel="Projects Array Controller" customClass="CRCArrayController">
+        <arrayController objectClassName="CRCProject" automaticallyPreparesContent="YES" id="Lhr-BN-mfy" userLabel="Projects Array Controller" customClass="CRCProjectsArrayController">
             <declaredKeys>
                 <string>name</string>
             </declaredKeys>
@@ -276,7 +277,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="createProject:" target="-2" id="suS-ah-eN1"/>
+                            <action selector="showCreateProjectSheet:" target="-2" id="qze-3L-bI1"/>
                         </connections>
                     </button>
                     <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJS-Wa-3sA">

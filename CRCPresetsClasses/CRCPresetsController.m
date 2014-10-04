@@ -26,6 +26,13 @@
                                          target:self
                                        selector:@selector(saveModificationsToDisk)
                                        userInfo:nil repeats:YES];
+        
+        [[NSNotificationCenter defaultCenter]addObserverForName:@"NSApplicationWillTerminateNotification"
+                                                         object:nil
+                                                          queue:nil
+                                                     usingBlock:^(NSNotification *note) {
+                                                         [self saveModificationsToDisk];
+                                                     }];
     }
     
     return self;

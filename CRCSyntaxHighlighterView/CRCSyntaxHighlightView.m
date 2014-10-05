@@ -26,6 +26,8 @@
         [self.enclosingScrollView setBorderType:NSGrooveBorder];
         self.frameLoadDelegate = self;
         
+        [[self preferences]setDefaultFixedFontSize:9];
+        [[self preferences]setDefaultFixedFontSize:9];
 
 
 
@@ -34,7 +36,8 @@
 }
 
 - (void)awakeFromNib {
-    [self.enclosingScrollView setBorderType:NSGrooveBorder];
+    [[self preferences]setDefaultFixedFontSize:9];
+    [[self preferences]setDefaultFixedFontSize:9];
 }
 
 - (void)setRawContent:(NSString *)theContent {

@@ -10,13 +10,15 @@
 
 @implementation CRCPresetsController
 
+
+@synthesize toggleMenuLabel = _toggleMenuLabel;
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         
         NSMutableArray *projects = [self loadProjectsFromUserDefaults];
-        NSLog(@"SDF");
+        _toggleMenuLabel = @"Show Presets Manager";
         self.projectsArray = projects;
         // Instead of having to observe each and every current (and future) property
         // in CRCProject and CRCpreset and synchronize when there is a change, it is easier to just
@@ -52,11 +54,21 @@
     [defaults synchronize];
 }
 
-- (IBAction)showPresetsPanel:(id)sender {
-    if (nil == self.presetsPanel) {
+- (IBAction)togglePresetsWindow:(id)sender {
+    if (nil == self.presetsWindow) {
         [[NSBundle mainBundle]loadNibNamed:@"PresetsWindow" owner:self topLevelObjects:nil];
     }
-    [self.presetsPanel makeKeyAndOrderFront:self];
+    if (self.presetsWindow.visible) {
+        [self.presetsWindow orderOut:self];
+        [self willChangeValueForKey:@"toggleMenuLabel"];
+        _toggleMenuLabel = @"Show Presets Manager";
+        [self didChangeValueForKey:@"toggleMenuLabel"];
+    } else {
+        [self.presetsWindow makeKeyAndOrderFront:self];
+        [self willChangeValueForKey:@"toggleMenuLabel"];
+        _toggleMenuLabel = @"Hide Presets Manager";
+        [self didChangeValueForKey:@"toggleMenuLabel"];
+    }
 }
 
 
@@ -77,7 +89,7 @@
     newPreset.name = @"Untitled Preset";
     
     self.temporaryPreset = newPreset;
-    newPreset.request = [CRCRequest requestWithApplication:[NSApplication sharedApplication].delegate];
+    newPreset.request = [CRCRequest requestWithApplication:(CocoaRestClientAppDelegate*)[NSApplication sharedApplication].delegate];
     
     [[NSApp mainWindow] beginSheet:self.addPresetWindow
     completionHandler:^(NSModalResponse returnCode) {

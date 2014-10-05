@@ -226,11 +226,13 @@ static CRCContentType requestContentType;
     [drawerView registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]];
     
     [headersTableView setDoubleAction:@selector(doubleClickedHeaderRow:)];
+    headersTableView.identity = TabbingTableIdentityHeaders;
     [headersTableView setTextDidEndEditingAction:@selector(doneEditingHeaderRow:)];
     [paramsTableView setDoubleAction:@selector(doubleClickedParamsRow:)];
+    paramsTableView.identity = TabbingTableIdentityParams;
     [paramsTableView setTextDidEndEditingAction:@selector(doneEditingParamsRow:)];
     [filesTableView setDoubleAction:@selector(doubleClickedFileRow:)];
-    
+    filesTableView.identity = TabbingTableIdentityFiles;
     [filesTableView registerForDraggedTypes: [NSArray arrayWithObject: NSFilenamesPboardType]];
     [filesTableView setDelegate: self];
     [filesTableView setDataSource: self];

@@ -33,7 +33,7 @@
     } else {
         [[NSColor selectedControlColor]setFill];
         [[NSColor selectedControlTextColor]setStroke];
-        self.textColor = [NSColor secondaryLabelColor];
+        self.textColor = [NSColor darkGrayColor];
     }
     
     [bp fill];
@@ -44,7 +44,7 @@
 
 -  (void)setBackgroundStyle:(NSBackgroundStyle)style {
     _style = style;
-    [self setNeedsDisplay];
+    //[self setNeedsDisplay];
 }
 
 @end

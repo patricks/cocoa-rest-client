@@ -57,9 +57,9 @@
     NSLog(@"Pressed export");
     
     NSLog(@"Saved request array = %@", savedRequestsArray);
-    for (id object in savedRequestsArray) {
+    /*for (id object in savedRequestsArray) {
         NSLog(@"Request = %@", object);
-    }
+    }*/
     
     NSSavePanel* picker = [NSSavePanel savePanel];
 	

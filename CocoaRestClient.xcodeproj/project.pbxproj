@@ -39,9 +39,7 @@
 		987E0E8B19DF5B76008FDB42 /* CRCPresetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E0E8A19DF5B76008FDB42 /* CRCPresetsController.m */; };
 		987E0E8E19DF6028008FDB42 /* CRCPreset.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E0E8D19DF6028008FDB42 /* CRCPreset.m */; };
 		987E0E9119DF606E008FDB42 /* CRCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E0E9019DF606E008FDB42 /* CRCProject.m */; };
-		98CDDEE119DF676600BAFD67 /* NewProjectDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98CDDEE019DF676600BAFD67 /* NewProjectDialog.xib */; };
 		98CDDEE319DF9C5000BAFD67 /* PresetsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98CDDEE219DF9C5000BAFD67 /* PresetsWindow.xib */; };
-		98D9C19F19DFBDD700907991 /* CRCProjectsArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C19E19DFBDD700907991 /* CRCProjectsArrayController.m */; };
 		98D9C1A519DFCABB00907991 /* CRCSavePresetWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C1A419DFCABB00907991 /* CRCSavePresetWindow.m */; };
 		98D9C1A819DFD01100907991 /* CRCCreateProjectWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C1A719DFD01100907991 /* CRCCreateProjectWindow.m */; };
 		AF074F5810F595AF00EE44D8 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = AF074F4D10F595AF00EE44D8 /* NSObject+SBJSON.m */; };
@@ -164,10 +162,7 @@
 		987E0E8D19DF6028008FDB42 /* CRCPreset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCPreset.m; path = CRCPresetsClasses/CRCPreset.m; sourceTree = "<group>"; };
 		987E0E8F19DF606E008FDB42 /* CRCProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCProject.h; path = CRCPresetsClasses/CRCProject.h; sourceTree = "<group>"; };
 		987E0E9019DF606E008FDB42 /* CRCProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCProject.m; path = CRCPresetsClasses/CRCProject.m; sourceTree = "<group>"; };
-		98CDDEE019DF676600BAFD67 /* NewProjectDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewProjectDialog.xib; path = CRCPresetsClasses/NewProjectDialog.xib; sourceTree = "<group>"; };
 		98CDDEE219DF9C5000BAFD67 /* PresetsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PresetsWindow.xib; path = CRCPresetsClasses/PresetsWindow.xib; sourceTree = "<group>"; };
-		98D9C19D19DFBDD700907991 /* CRCProjectsArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCProjectsArrayController.h; path = CRCPresetsClasses/CRCProjectsArrayController.h; sourceTree = "<group>"; };
-		98D9C19E19DFBDD700907991 /* CRCProjectsArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCProjectsArrayController.m; path = CRCPresetsClasses/CRCProjectsArrayController.m; sourceTree = "<group>"; };
 		98D9C1A319DFCABB00907991 /* CRCSavePresetWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCSavePresetWindow.h; path = CRCPresetsClasses/CRCSavePresetWindow.h; sourceTree = "<group>"; };
 		98D9C1A419DFCABB00907991 /* CRCSavePresetWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCSavePresetWindow.m; path = CRCPresetsClasses/CRCSavePresetWindow.m; sourceTree = "<group>"; };
 		98D9C1A619DFD01100907991 /* CRCCreateProjectWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCCreateProjectWindow.h; path = CRCPresetsClasses/CRCCreateProjectWindow.h; sourceTree = "<group>"; };
@@ -325,7 +320,6 @@
 				AFA11AB315CEDA3600831738 /* Welcome.xib */,
 				AFA11ACC15CF036300831738 /* motd.txt */,
 				983DC81B19DDDD26001CC18E /* template.html */,
-				98CDDEE019DF676600BAFD67 /* NewProjectDialog.xib */,
 				98CDDEE219DF9C5000BAFD67 /* PresetsWindow.xib */,
 			);
 			name = Resources;
@@ -417,8 +411,6 @@
 				987E0E8D19DF6028008FDB42 /* CRCPreset.m */,
 				987E0E8F19DF606E008FDB42 /* CRCProject.h */,
 				987E0E9019DF606E008FDB42 /* CRCProject.m */,
-				98D9C19D19DFBDD700907991 /* CRCProjectsArrayController.h */,
-				98D9C19E19DFBDD700907991 /* CRCProjectsArrayController.m */,
 				98D9C1A319DFCABB00907991 /* CRCSavePresetWindow.h */,
 				98D9C1A419DFCABB00907991 /* CRCSavePresetWindow.m */,
 				98D9C1A619DFD01100907991 /* CRCCreateProjectWindow.h */,
@@ -583,7 +575,6 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				AF7A149B113B583A00F0D6F5 /* cocoaRestClient.icns in Resources */,
-				98CDDEE119DF676600BAFD67 /* NewProjectDialog.xib in Resources */,
 				983DC81C19DDDD26001CC18E /* template.html in Resources */,
 				AFE1837712E394E5001B1B29 /* LICENSE.txt in Resources */,
 				AFCE79571419B54600E22468 /* dsa_pub.pem in Resources */,
@@ -612,7 +603,6 @@
 				AF074F5810F595AF00EE44D8 /* NSObject+SBJSON.m in Sources */,
 				AF074F5910F595AF00EE44D8 /* NSString+SBJSON.m in Sources */,
 				98D9C1A819DFD01100907991 /* CRCCreateProjectWindow.m in Sources */,
-				98D9C19F19DFBDD700907991 /* CRCProjectsArrayController.m in Sources */,
 				AF074F5A10F595AF00EE44D8 /* SBJSON.m in Sources */,
 				AF074F5B10F595AF00EE44D8 /* SBJsonBase.m in Sources */,
 				AF074F5C10F595AF00EE44D8 /* SBJsonParser.m in Sources */,
@@ -717,7 +707,6 @@
 				INFOPLIST_FILE = "CocoaRestClient-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Cocoa REST Client";
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -743,7 +732,6 @@
 				INFOPLIST_FILE = "CocoaRestClient-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Cocoa REST Client";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -757,10 +745,9 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DDEBUG";
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -773,9 +760,8 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};

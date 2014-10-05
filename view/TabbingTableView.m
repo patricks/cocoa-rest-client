@@ -11,6 +11,7 @@
 
 @implementation TabbingTableView
 
+
 // Remember the key the user pressed to end the editing action
 - (void) textDidEndEditing: (NSNotification *) notification {
     int editedColumn = [self editedColumn];
@@ -23,7 +24,29 @@
         TableRowAndColumn *tableRowAndColumn = [[TableRowAndColumn alloc] init];
         tableRowAndColumn.column = currentColumn;
         tableRowAndColumn.row = editedRow;
-        [[self delegate] performSelector:textDidEndEditingAction withObject:tableRowAndColumn];
+        NSString *selector = nil;
+        switch (self.identity) {
+            case TabbingTableIdentityHeaders:
+                selector = @"doneEditingHeaderRow:";
+                break;
+            case TabbingTableIdentityParams:
+                selector = @"doneEditingParamsRow:";
+            default:
+                selector = nil;
+                break;
+        }
+        
+        /*
+         SELECTOR IS NOT KNOWN AT RUNTIME, THIS UGLY HACK IS
+         SO THAT THE COMPILER IS HAPPY.
+         */
+        id del = [NSApplication sharedApplication].delegate;
+        if (nil != selector && [del respondsToSelector:NSSelectorFromString(selector)]) {
+            [del performSelector:NSSelectorFromString(selector)
+                      withObject:tableRowAndColumn
+                      afterDelay:0];
+        }
+        
     }
 }
 

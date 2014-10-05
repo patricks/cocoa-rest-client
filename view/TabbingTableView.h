@@ -12,10 +12,18 @@
 
 #import <AppKit/AppKit.h>
 
+typedef NS_ENUM(NSInteger, TabbingTableIdentity) {
+    TabbingTableIdentityHeaders,
+    TabbingTableIdentityFiles,
+    TabbingTableIdentityParams,
+};
+
 @interface TabbingTableView : NSTableView {
     int lastTextMovement;
     SEL textDidEndEditingAction;
 }
+
+@property TabbingTableIdentity identity;
 
 - (int) getLastTextMovement;
 - (void) setTextDidEndEditingAction: (SEL)action;

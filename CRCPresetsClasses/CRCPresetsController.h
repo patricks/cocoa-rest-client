@@ -12,8 +12,8 @@
 #import <Cocoa/Cocoa.h>
 #import "CRCSavePresetWindow.h"
 #import "CRCCreateProjectWindow.h"
-#import "CRCProjectsArrayController.h"
 #import "CocoaRestClientAppDelegate.h"
+
 
 static NSString *kProjectsUserDefaultsKey = @"CRCProjects";
 
@@ -23,13 +23,14 @@ static NSString *kProjectsUserDefaultsKey = @"CRCProjects";
 }
 
 @property (nonatomic) NSMutableArray        *projectsArray;
-@property IBOutlet NSPanel                  *presetsPanel;
-@property IBOutlet CRCProjectsArrayController        *projectsArrayController;
+@property IBOutlet NSWindow                  *presetsWindow;
+@property IBOutlet NSArrayController        *projectsArrayController;
 @property IBOutlet NSArrayController        *presetsArrayController;
 @property IBOutlet CRCSavePresetWindow      *addPresetWindow;
 @property IBOutlet CRCCreateProjectWindow   *createProjectWindow;
 @property CRCPreset                         *temporaryPreset;
 @property CRCProject                        *temporaryProject;
+@property (readonly) NSString               *toggleMenuLabel;
 
 
 

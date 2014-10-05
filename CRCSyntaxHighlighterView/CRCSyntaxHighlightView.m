@@ -24,6 +24,10 @@
                                                                     error:nil]
                                 baseURL:base];
         [self.enclosingScrollView setBorderType:NSGrooveBorder];
+        self.frameLoadDelegate = self;
+        
+
+
 
     }
     return self;
@@ -34,14 +38,18 @@
 }
 
 - (void)setRawContent:(NSString *)theContent {
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"template" ofType:@"html"];
-    NSURL *base = [[[NSBundle mainBundle]resourceURL]URLByAppendingPathComponent:@"highlighter"];
-
-    NSString *template = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     NSString *escaped = [theContent gtm_stringByEscapingForAsciiHTML];
-    template = [template stringByReplacingOccurrencesOfString:@"No Content" withString:escaped];
-    [[self mainFrame]loadHTMLString:template baseURL:base];
+    
+    id win = [self windowScriptObject];
+    [win callWebScriptMethod:@"processText"
+               withArguments:[NSArray arrayWithObjects:escaped, @"javascript", nil]];
 }
 
+
+- (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
+    id win = [sender windowScriptObject];
+    [win callWebScriptMethod:@"processText"
+               withArguments:[NSArray arrayWithObjects:@"Nothing yet loaded...", @"plain", nil]];
+}
 
 @end

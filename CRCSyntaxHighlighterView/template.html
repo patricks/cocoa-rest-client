@@ -196,8 +196,28 @@ Prism.hooks.add("after-highlight",function(e){var n=e.element.parentNode;if(n&&/
         </style>
     </head>
     <body>
-        <pre class="line-numbers"><code class="language-javascript">No Content</code></pre>
+        <!--<pre class="line-numbers"><code class="language-javascript">No Content</code></pre>-->
+        <pre class="line-numbers"><code id="runtime"></code></pre>
+        <p id="error">ERROR: <span id="error-desc"></span></p>
         <!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
-
+        <script type="text/javascript">
+            // Set error element invisible.
+            document.getElementById("error").style.visibility="hidden";
+            function processText(text, language) {
+                var lang = language || 'plain';
+                var langClass = 'language-' + lang;
+                document.getElementById("runtime").innerHTML = text;
+                document.getElementById("runtime").className = langClass;
+                try {
+                    var foo = Prism.highlightAll(false, function(){
+                                                 });
+                } catch (e) {
+                    document.getElementById("error").style.visibility="visible";
+                    document.getElementById("error-desc").innerHTML = e.message;
+                }
+                
+                                       
+            }
+        </script>
     </body>
 </html>

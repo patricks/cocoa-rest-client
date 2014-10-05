@@ -915,20 +915,8 @@ CA
                                     <rect key="frame" x="10" y="25" width="1176" height="348"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <comboBox focusRingType="none" verticalHuggingPriority="750" id="1029">
-                                            <rect key="frame" x="17" y="3" width="99" height="19"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <comboBoxCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" focusRingType="none" bezelStyle="round" numberOfVisibleItems="5" id="1030">
-                                                <font key="font" metaFont="miniSystem"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </comboBoxCell>
-                                            <connections>
-                                                <action selector="updateResponseSyntaxHighlight:" target="494" id="1031"/>
-                                            </connections>
-                                        </comboBox>
                                         <webView canDrawConcurrently="YES" focusRingType="none" id="1079" customClass="CRCSyntaxHighlightView">
-                                            <rect key="frame" x="17" y="28" width="1142" height="314"/>
+                                            <rect key="frame" x="17" y="17" width="1142" height="325"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <webPreferences key="preferences" defaultFontSize="11" defaultFixedFontSize="11" plugInsEnabled="NO" javaEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO" loadsImagesAutomatically="NO" allowsAnimatedImages="NO" allowsAnimatedImageLooping="NO">
                                                 <nil key="identifier"/>
@@ -1048,7 +1036,6 @@ CA
                 <outlet property="requestTextPlain" destination="990" id="994"/>
                 <outlet property="requestTextPlainView" destination="989" id="993"/>
                 <outlet property="requestView" destination="954" id="955"/>
-                <outlet property="responseSyntaxBox" destination="1029" id="1033"/>
                 <outlet property="responseTextHeaders" destination="631" id="632"/>
                 <outlet property="saveRequestSheet" destination="725" id="729"/>
                 <outlet property="saveRequestTextField" destination="734" id="742"/>

@@ -35,6 +35,12 @@
                                                      usingBlock:^(NSNotification *note) {
                                                          [self saveModificationsToDisk];
                                                      }];
+        
+        // handle window close events
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(windowWillClose:)
+                                                     name:NSWindowWillCloseNotification
+                                                   object:self.presetsWindow];
     }
     
     return self;
@@ -58,6 +64,15 @@
     if (nil == self.presetsWindow) {
         [[NSBundle mainBundle]loadNibNamed:@"PresetsWindow" owner:self topLevelObjects:nil];
     }
+    
+    [self tooglePresetsMenuItem];
+}
+
+- (void)windowWillClose:(NSNotification *)notification {
+    [self tooglePresetsMenuItem];
+}
+
+- (void)tooglePresetsMenuItem {
     if (self.presetsWindow.visible) {
         [self.presetsWindow orderOut:self];
         [self willChangeValueForKey:@"toggleMenuLabel"];
@@ -70,7 +85,6 @@
         [self didChangeValueForKey:@"toggleMenuLabel"];
     }
 }
-
 
 - (void)tableView:(NSTableView *)tableView didAddRowView:(NSTableRowView *)rowView forRow:(NSInteger)row {
     NSLog(@"foo");
